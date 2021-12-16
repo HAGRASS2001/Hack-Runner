@@ -60,10 +60,10 @@ public class Wire : MonoBehaviour
 
     void Updatewire(Vector3 newPosition) {
         // update position
-        transform.position = newPosition;
+        transform.position = newPosition;   
         // update direction
         Vector3 direction = newPosition - startPoint;
-   // update scale
+          // update scale
    float dist = Vector2.Distance(startPoint, newPosition);
         wireEnd.size = new Vector2(dist, wireEnd.size.y);
     }
@@ -71,6 +71,7 @@ public class Wire : MonoBehaviour
 
     void Update()
     {
-        
-    }
+       
+
+     }
 }
