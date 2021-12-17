@@ -10,11 +10,13 @@ public class playercontroller : MonoBehaviour
     public KeyCode spacebar;
     public KeyCode leftarrow;
     public KeyCode rightarrow;
+    public KeyCode kick;
     public Transform groundcheck;
     public float groundcheckradius;
     public LayerMask whatisground;
     private bool grounded;
     private Animator anim;
+    private bool kickornot;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,12 @@ public class playercontroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(kick))
+        {
+            kickornot = true;
 
+        }
+        anim.SetBool("kickornot", kickornot);
         if (Input.GetKey(spacebar) && grounded)
         {
             jump();
@@ -59,6 +66,7 @@ public class playercontroller : MonoBehaviour
     {
         GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumphieght);
     }
+
     private void FixedUpdate()
     {
         grounded = Physics2D.OverlapCircle(groundcheck.position, groundcheckradius, whatisground);

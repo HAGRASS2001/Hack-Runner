@@ -494,6 +494,7 @@ MonoBehaviour:
   spacebar: 32
   leftarrow: 276
   rightarrow: 275
+  kick: 97
   groundcheck: {fileID: 2132810011}
   groundcheckradius: 0.2
   whatisground:
@@ -583,7 +584,7 @@ SpriteRenderer:
   m_SortingLayerID: -2092083783
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9c2c4c656fb881349aa8c6ef708fcbb3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2c88f1e9b12b25942894808acf8e0256, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
