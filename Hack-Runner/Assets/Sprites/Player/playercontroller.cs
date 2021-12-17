@@ -32,7 +32,7 @@ public class playercontroller : MonoBehaviour
             kickornot = true;
 
         }
-        anim.SetBool("kickornot", kickornot);
+            
         if (Input.GetKey(spacebar) && grounded)
         {
             jump();
