@@ -16,7 +16,6 @@ public class playercontroller : MonoBehaviour
     public LayerMask whatisground;
     private bool grounded;
     private Animator anim;
-    private bool kickornot;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,12 +26,7 @@ public class playercontroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(kick))
-        {
-            kickornot = true;
-
-        }
-            
+        Kick();
         if (Input.GetKey(spacebar) && grounded)
         {
             jump();
@@ -67,6 +61,18 @@ public class playercontroller : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumphieght);
     }
 
+    void Kick (){
+            if (Input.GetKey(kick))
+            {
+                anim.SetBool("kick", true);
+                StartCoroutine(WaitForHalfASecond());
+            }
+    }
+    IEnumerator WaitForHalfASecond()
+    {
+        yield return new WaitForSeconds(1/32);
+        anim.SetBool("kick", false);
+    }
     private void FixedUpdate()
     {
         grounded = Physics2D.OverlapCircle(groundcheck.position, groundcheckradius, whatisground);
