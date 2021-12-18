@@ -46,6 +46,14 @@ public class Wire : MonoBehaviour
         }
     }
 
+
+    private void OnMouseUp()
+    {
+        // reset the wire position 
+
+        Updatewire(startPosition); 
+    }
+
     void Done()
     {
         // turn on light
@@ -60,8 +68,8 @@ public class Wire : MonoBehaviour
         // update direction
         Vector3 direction = newPosition - startPoint;
         transform.right = direction * transform.lossyScale.x;
-          // update scale
-   float dist = Vector2.Distance(new Vector3(startPoint.x-1, startPoint.y, startPoint.z), newPosition);
+        // update scale
+         float dist = Vector2.Distance(new Vector3(startPoint.x-1, startPoint.y, startPoint.z), newPosition);
         wireEnd.size = new Vector2(dist, wireEnd.size.y);
     }
     // Update is called once per frame
