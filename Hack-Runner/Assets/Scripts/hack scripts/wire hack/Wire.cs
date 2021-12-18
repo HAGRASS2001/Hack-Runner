@@ -34,12 +34,12 @@ public class Wire : MonoBehaviour
                 Updatewire(collider.transform.position);
 
                 //check if the wires are same color
-                //if (transform.parent.name.Equals(collider.transform.parent.name))
-                //{
-                //    //finish step
-                //    collider.GetComponent<Wire>()?.Done();
-                //    Done();
-                //}
+                if (transform.parent.name.Equals(collider.transform.parent.name))
+                {
+                    //finish step
+                    collider.GetComponent<Wire>()?.Done();
+                    Done();
+                }
 
                 return;
             }
