@@ -21,6 +21,9 @@ public class playerstats : MonoBehaviour {
 	public Image healthicon2;
 	public Image healthicon3;
 
+	public Image livesicon1;
+	public Image livesicon2;
+
 	// Use this for initialization
 	void Start () {
 		spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
@@ -57,8 +60,15 @@ public class playerstats : MonoBehaviour {
 			}
 			if (this.lives > 0 && this.health == 0) {
 				//FindObjectOfType<lvlmanager>().RespawnPlayer();
-				this.health = 6;
-				this.lives--;
+				if (lives == 2) {
+					this.health = 6;
+					Destroy(this.livesicon1);
+					this.lives--;
+				} else if (lives == 1) {
+					this.health = 6;
+					Destroy(this.livesicon1);
+					this.lives--;
+				}
 			} else if (this.lives == 0 && this.health == 0) {
 				Debug.Log("gameover");
 				Destroy(this.gameObject);

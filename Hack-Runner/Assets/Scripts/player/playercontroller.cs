@@ -11,6 +11,7 @@ public class playercontroller : MonoBehaviour
     public KeyCode leftarrow;
     public KeyCode rightarrow;
     public KeyCode kick;
+    public KeyCode test;
     public Transform groundcheck;
     public float groundcheckradius;
     public LayerMask whatisground;
@@ -51,6 +52,10 @@ public class playercontroller : MonoBehaviour
             }
         }
         anim.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
+        if (Input.GetKey(test))
+        {
+            FindObjectOfType<lvlmanager>().RespawnPlayer();
+        }
     }
     void flip()
     {

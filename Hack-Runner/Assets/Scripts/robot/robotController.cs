@@ -20,7 +20,7 @@ public class robotController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Attack();
+        //Attack();
         if (Input.GetKey(leftarrow))
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(-movespeed, GetComponent<Rigidbody2D>().velocity.y);
@@ -42,19 +42,19 @@ public class robotController : MonoBehaviour
         }
         anim.SetFloat("speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
     }
-    void Attack()
-    {
-        if (Input.GetKey(attack2))
-        {
-            anim.SetBool("attack", true);
-            StartCoroutine(WaitForHalfASecond());
-        }
-    }
-    IEnumerator WaitForHalfASecond()
-    {
-        yield return new WaitForSeconds(1);
-        anim.SetBool("attack", false);
-    }
+    //void Attack()
+    //{
+    //    if (Input.GetKey(attack2))
+    //    {
+    //        anim.SetBool("attack", true);
+    //        StartCoroutine(WaitForHalfASecond());
+    //    }
+    //}
+    //IEnumerator WaitForHalfASecond()
+    //{
+    //    yield return new WaitForSeconds(1);
+    //    anim.SetBool("attack", false);
+    //}
     void flip()
     {
         transform.localScale = new Vector3(-(transform.localScale.x), transform.localScale.y, transform.localScale.z);
