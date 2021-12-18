@@ -10,50 +10,56 @@ public class playerstats : MonoBehaviour {
 
 	private float flickertime = 0f;
 	public float flickerduration = 0.1f;
-
-	private SpriteRenderer spriteRenderer;
-
+	private SpriteRenderer spriterenderer;
 	public bool isimmune = false;
-	private float immunitytime = 0F;
-	public float immuntyduration = 1.5f;
+	private float immunitytime = 0f;
+	public float immunityduration = 1.5f;
 
-	public Image healthicon1;
-	public Image healthicon2;
-	public Image healthicon3;
 
-	public Image livesicon1;
-	public Image livesicon2;
+	public GameObject healthicon1;
+	public GameObject healthicon2;
+	public GameObject healthicon3;
+
+	public GameObject livesicon1;
+	public GameObject livesicon2;
 
 	// Use this for initialization
 	void Start () {
-		spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
+		spriterenderer = this.gameObject.GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (this.isimmune == true) {
+		if (this.isimmune == true)
+		{
 			SpriteFlicker();
-			immunitytime = immunitytime = Time.deltaTime;
-			if (immunitytime >= immuntyduration) {
+			immunitytime = immunitytime + Time.deltaTime;
+			if (immunitytime >= immunityduration)
+			{
 				this.isimmune = false;
-				this.spriteRenderer.enabled = true;
+				this.spriterenderer.enabled = true;
 			}
 		}
-		
+
 	}
 	public void takedamage(int damage) {
+		if (this.lives == 0 && this.health == 0)
+		{
+			Debug.Log("gameover");
+			Destroy(this.gameObject);
+		}
 		if (this.isimmune == false) {
 			this.health = this.health - damage;
 			if (this.health == 2)
 			{
-				Destroy(healthicon3);
+				healthicon3.SetActive(false);
 			}
 			else if (health == 1)
 			{
-				Destroy(healthicon2);
+				healthicon2.SetActive(false);
 			}
 			else {
-				Destroy(healthicon1);
+				healthicon1.SetActive(false);
 			}
 			if (this.health < 0) {
 				this.health = 0;
@@ -61,33 +67,40 @@ public class playerstats : MonoBehaviour {
 			if (this.lives > 0 && this.health == 0) {
 				//FindObjectOfType<lvlmanager>().RespawnPlayer();
 				if (lives == 2) {
-					this.health = 6;
-					Destroy(this.livesicon1);
+					healthicon3.SetActive(true);
+					healthicon2.SetActive(true);
+					healthicon1.SetActive(true);
+					this.health = 3;
+					livesicon1.SetActive(false);
 					this.lives--;
+
 				} else if (lives == 1) {
-					this.health = 6;
-					Destroy(this.livesicon1);
+					livesicon2.SetActive(false);
 					this.lives--;
 				}
-			} else if (this.lives == 0 && this.health == 0) {
-				Debug.Log("gameover");
-				Destroy(this.gameObject);
 			}
 			Debug.Log("player health:" + this.health.ToString());
 			Debug.Log("player lives:" + this.lives.ToString());
 		}
-		PlayHitReaction();
+		playhitreaction();
 	}
-	void PlayHitReaction() {
+	void playhitreaction()
+	{
 		this.isimmune = true;
 		this.immunitytime = 0f;
 	}
-	void SpriteFlicker() {
-		if (this.flickertime < this.flickerduration) {
+
+	void SpriteFlicker()
+	{
+		if (this.flickertime < this.flickerduration)
+		{
 			this.flickertime = this.flickertime + Time.deltaTime;
-		} else if (this.flickertime >= this.flickerduration) {
-			spriteRenderer.enabled = !(spriteRenderer.enabled);
+		}
+		else
+		{
+			spriterenderer.enabled = !(spriterenderer.enabled);
 			this.flickertime = 0;
 		}
 	}
+
 }
