@@ -8,7 +8,9 @@ public class keyunlock : MonoBehaviour
     public List<Button> numbers;
     private int[] numberarray = {1, 5 , 6, 9, 10};
     public int counter = 0;
+    public int counter2 = 0;
     public int falsecounter = 0;
+ 
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +21,9 @@ public class keyunlock : MonoBehaviour
     void Update()
     {
 
-        if (counter == 5) {
-
+        if (counter == 5 && counter2 ==5) {
+            Application.LoadLevel(2);
+            Destroy(GetComponent<hackscenescript>().hackcheck);
         }
         else if (counter > 5)
         {
@@ -29,6 +32,7 @@ public class keyunlock : MonoBehaviour
                 numbers[i].image.color = Color.red;
                 numbers[i].interactable = false;
             }
+            Application.LoadLevel(3);
         }
     }
 
@@ -36,9 +40,10 @@ public class keyunlock : MonoBehaviour
 
         for (int i = 0; i < numberarray.Length; i++) {
             if (int.Parse(number.GetComponentInChildren<Text>().text) == numberarray[i])
-            {
+            {                
                 number.interactable = false;
                 number.image.color = Color.green;
+                counter2++;
             }
         }
         counter++;

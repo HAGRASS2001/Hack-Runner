@@ -5,6 +5,7 @@ using UnityEngine;
 public class hackscenescript : MonoBehaviour
 {
     public bool trigger = false;
+    public GameObject hackcheck;
     // Start is called before the first frame update
     void Start()
     {

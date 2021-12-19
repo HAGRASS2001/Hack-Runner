@@ -58,7 +58,7 @@ public class playercontroller : MonoBehaviour
 
         if (Input.GetKey(e)) {
             if (triggerhack == true) {
-                Application.LoadLevel(0);
+                Application.LoadLevel(3);
             }
         }
     }
