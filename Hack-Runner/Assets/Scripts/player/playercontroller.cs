@@ -16,6 +16,9 @@ public class playercontroller : MonoBehaviour
     public LayerMask whatisground;
     private bool grounded;
     private Animator anim;
+    public GameObject kickk;
+    public KeyCode e;
+    public bool triggerhack;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +54,13 @@ public class playercontroller : MonoBehaviour
             }
         }
         anim.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
+
+
+        if (Input.GetKey(e)) {
+            if (triggerhack == true) {
+                Application.LoadLevel(0);
+            }
+        }
     }
     void flip()
     {
@@ -64,17 +74,29 @@ public class playercontroller : MonoBehaviour
     void Kick (){
             if (Input.GetKey(kick))
             {
-                anim.SetBool("kick", true);
-                StartCoroutine(WaitForHalfASecond());
+            kickk.SetActive(true);
+            anim.SetBool("kick", true); 
+            StartCoroutine(WaitForHalfASecond());
             }
     }
     IEnumerator WaitForHalfASecond()
     {
         yield return new WaitForSeconds(1/32);
+        kickk.SetActive(false);
         anim.SetBool("kick", false);
+    }
+    IEnumerator WaitForHalfASecond2()
+    {
+        yield return new WaitForSeconds(0.5f);
+        kickk.SetActive(false);
     }
     private void FixedUpdate()
     {
         grounded = Physics2D.OverlapCircle(groundcheck.position, groundcheckradius, whatisground);
+        if (Input.GetKey(kick))
+        {
+            kickk.SetActive(true);
+            StartCoroutine(WaitForHalfASecond2());
+        }
     }
 }

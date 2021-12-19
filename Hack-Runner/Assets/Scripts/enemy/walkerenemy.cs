@@ -40,6 +40,10 @@ public class walkerenemy : enemyController {
 			FindObjectOfType<playerstats>().takedamage(damage);
 			flip();
 		}
+		if (other.gameObject.tag == "playerkick")
+		{
+			Destroy(this.gameObject, 0f);
+		}
 	}
 	void attack()
 	{
@@ -53,16 +57,6 @@ public class walkerenemy : enemyController {
 	}
 	void OnCollisionEnter2D(Collision2D other)
 	{
-		if (other.gameObject.tag == "Player")
-		{
-			if (other.GetContact(0).point.x < this.transform.position.x)
-			{
-				Destroy(this.gameObject, 0f);
-			}
-			else if (other.GetContact(0).point.y > this.transform.position.y)
-			{
-				Destroy(this.gameObject, 0f);
-			}
-		}
+
 	}
 }
