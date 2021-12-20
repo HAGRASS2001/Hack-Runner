@@ -11,10 +11,11 @@ public class keyunlock : MonoBehaviour
     public int counter = 0;
     public int counter2 = 0;
     public int falsecounter = 0;
+    public GameObject x;
     // Start is called before the first frame update
     void Start()
     {
-        
+        x.SetActive(false);
     }
 
     // Update is called once per frame
@@ -22,7 +23,8 @@ public class keyunlock : MonoBehaviour
     {
 
         if (counter == 5 && counter2 ==5) {
-            FindObjectOfType<lvlmanager>().RespawnPlayer();
+            x.SetActive(false);          
+
         }
         else if (counter > 5)
         {

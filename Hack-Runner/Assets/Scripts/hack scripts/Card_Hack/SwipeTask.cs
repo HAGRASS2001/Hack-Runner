@@ -14,10 +14,15 @@ public float _countdownMax = 0.5f;
 
     public GameObject green_On;
     public GameObject red_On;
-
+    public GameObject check;
 
 private int _currentSwipePointIndex = 0;
 private float _countdown =0;
+
+    private void Start()
+    {
+        check.SetActive(false);
+    }
     private void Update()
     {
         _countdown -= Time.deltaTime;

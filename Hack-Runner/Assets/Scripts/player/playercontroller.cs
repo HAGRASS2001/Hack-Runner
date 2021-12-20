@@ -17,9 +17,6 @@ public class playercontroller : MonoBehaviour
     private bool grounded;
     private Animator anim;
     public GameObject kickk;
-    public KeyCode e;
-    public bool triggerhack;
-    public GameObject hack;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,13 +54,6 @@ public class playercontroller : MonoBehaviour
         }
         anim.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
 
-
-        if (Input.GetKey(e)) {
-            if (triggerhack == true) {
-                hack.SetActive(false);
-                Application.LoadLevel(3);
-            }
-        }
     }
     void flip()
     {

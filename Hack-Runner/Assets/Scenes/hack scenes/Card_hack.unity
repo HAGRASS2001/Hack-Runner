@@ -246,6 +246,7 @@ MonoBehaviour:
   _countdownMax: 0.5
   green_On: {fileID: 2122186704}
   red_On: {fileID: 1269068401}
+  check: {fileID: 0}
 --- !u!1 &225953112
 GameObject:
   m_ObjectHideFlags: 0
