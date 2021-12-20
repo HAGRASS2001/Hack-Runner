@@ -10,6 +10,7 @@ TagManager:
   - hack
   - end
   - setactivetrue
+  - hack card
   layers:
   - Default
   - TransparentFX
