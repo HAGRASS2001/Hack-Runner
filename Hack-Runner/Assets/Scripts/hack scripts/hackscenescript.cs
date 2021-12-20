@@ -21,13 +21,9 @@ public class hackscenescript : MonoBehaviour
         {
             if (trigger == true)
             {
-                //x.SetActive(true);
-                //hack.SetActive(false);
-                //hack.SetActive(false);
-                //Application.LoadLevel(3);
-                //StartCoroutine(Loadyourasynchack());
-                FindObjectOfType<keyunlock>().x.SetActive(true);
-                //FindObjectOfType<SwipeTask>().check.SetActive(true);
+
+                //FindObjectOfType<keyunlock>().x.SetActive(true);
+                FindObjectOfType<SwipeTask>().check.SetActive(true);
                 hackcheck.SetActive(false);
             }
         }
