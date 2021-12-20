@@ -12,10 +12,12 @@ public class keyunlock : MonoBehaviour
     public int counter2 = 0;
     public int falsecounter = 0;
     public GameObject x;
+    public Rigidbody2D player;
     // Start is called before the first frame update
     void Start()
     {
         x.SetActive(false);
+        player = FindObjectOfType<playercontroller>().gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -23,8 +25,8 @@ public class keyunlock : MonoBehaviour
     {
 
         if (counter == 5 && counter2 ==5) {
-            x.SetActive(false);          
-
+            x.SetActive(false);
+            player.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
         else if (counter > 5)
         {
