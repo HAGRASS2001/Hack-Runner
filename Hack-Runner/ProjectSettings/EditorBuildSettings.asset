@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Level1/scene3.unity
     guid: f2079d84238d88848bc8d01f20b94089
+  - enabled: 1
+    path: Assets/Scenes/hack scenes/key-hack.unity
+    guid: e4f4982668868aa438a8d00043cbd30c
   m_configObjects: {}

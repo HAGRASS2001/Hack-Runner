@@ -24,6 +24,7 @@ public class hackscenescript : MonoBehaviour
         {
             trigger = true;
             GetComponent<playercontroller>().triggerhack = trigger;
+
         }
         if (other.tag == "end") {
             trigger = false;

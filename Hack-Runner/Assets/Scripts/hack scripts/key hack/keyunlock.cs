@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class keyunlock : MonoBehaviour
 {
@@ -10,7 +11,6 @@ public class keyunlock : MonoBehaviour
     public int counter = 0;
     public int counter2 = 0;
     public int falsecounter = 0;
- 
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +22,7 @@ public class keyunlock : MonoBehaviour
     {
 
         if (counter == 5 && counter2 ==5) {
-            Application.LoadLevel(2);
-            Destroy(GetComponent<hackscenescript>().hackcheck);
+            FindObjectOfType<lvlmanager>().RespawnPlayer();
         }
         else if (counter > 5)
         {

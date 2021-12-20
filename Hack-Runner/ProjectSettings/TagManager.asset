@@ -9,6 +9,7 @@ TagManager:
   - playerkick
   - hack
   - end
+  - setactivetrue
   layers:
   - Default
   - TransparentFX

@@ -19,6 +19,7 @@ public class playercontroller : MonoBehaviour
     public GameObject kickk;
     public KeyCode e;
     public bool triggerhack;
+    public GameObject hack;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,7 @@ public class playercontroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         Kick();
         if (Input.GetKey(spacebar) && grounded)
         {
@@ -58,6 +60,7 @@ public class playercontroller : MonoBehaviour
 
         if (Input.GetKey(e)) {
             if (triggerhack == true) {
+                hack.SetActive(false);
                 Application.LoadLevel(3);
             }
         }
