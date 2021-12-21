@@ -46,7 +46,11 @@ public class hackscenescript : MonoBehaviour
             //GetComponent<playercontroller>().triggerhack = trigger;
 
         }
-        if(other.tag == "hack card")
+        if(other.tag == "hack card 1")
+        {
+            triggerCard = true;
+        }
+        if (other.tag == "hack card 2")
         {
             triggerCard = true;
         }
