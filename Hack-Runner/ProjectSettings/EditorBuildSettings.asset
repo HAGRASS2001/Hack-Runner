@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Level1/scene2.unity
     guid: 450855a62914f44418bd54a6769bbf02
   - enabled: 1
-    path: Assets/Scenes/Levels/Level1/scene3.unity
+    path: Assets/Scenes/Levels/Level1/scene3Backup.unity
     guid: f2079d84238d88848bc8d01f20b94089
   - enabled: 1
     path: Assets/Scenes/hack scenes/key-hack.unity

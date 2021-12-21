@@ -28,7 +28,7 @@ public class hackscenescript : MonoBehaviour
                 //FindObjectOfType<SwipeTask>().check.SetActive(true);
                 hackcheck.SetActive(false);
             }
-            if(triggerCard == true)
+            if (triggerCard == true)
             {
                 player.constraints = RigidbodyConstraints2D.FreezeAll;
                 //FindObjectOfType<keyunlock>().x.SetActive(true);
