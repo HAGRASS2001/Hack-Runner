@@ -6,12 +6,14 @@ using UnityEngine.SceneManagement;
 public class hackscenescript : MonoBehaviour
 {
     public KeyCode e;
-    public bool trigger = false;
+    public bool triggerKey = false;
+    public bool triggerCard = false;
     public GameObject hackcheck;
+    public Rigidbody2D player;
     // Start is called before the first frame update
     void Start()
     {
-
+        player = FindObjectOfType<playercontroller>().gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -19,9 +21,16 @@ public class hackscenescript : MonoBehaviour
     {
         if (Input.GetKey(e))
         {
-            if (trigger == true)
+            if (triggerKey == true)
             {
-
+                player.constraints = RigidbodyConstraints2D.FreezeAll;
+                FindObjectOfType<keyunlock>().x.SetActive(true);
+                //FindObjectOfType<SwipeTask>().check.SetActive(true);
+                hackcheck.SetActive(false);
+            }
+            if(triggerCard == true)
+            {
+                player.constraints = RigidbodyConstraints2D.FreezeAll;
                 //FindObjectOfType<keyunlock>().x.SetActive(true);
                 FindObjectOfType<SwipeTask>().check.SetActive(true);
                 hackcheck.SetActive(false);
@@ -33,12 +42,27 @@ public class hackscenescript : MonoBehaviour
     {
         if (other.tag == "hack")
         {
-            trigger = true;
+            triggerKey = true;
             //GetComponent<playercontroller>().triggerhack = trigger;
 
         }
+        if (other.tag == "hack camera 2")
+        {
+            triggerKey = true;
+            //GetComponent<playercontroller>().triggerhack = trigger;
+
+        }
+        if (other.tag == "hack card 1")
+        {
+            triggerCard = true;
+        }
+        if (other.tag == "hack card 2")
+        {
+            triggerCard = true;
+        }
         if (other.tag == "end") {
-            trigger = false;
+            triggerKey = false;
+            triggerCard = false;
             //GetComponent<playercontroller>().triggerhack = trigger;
         }
     }
