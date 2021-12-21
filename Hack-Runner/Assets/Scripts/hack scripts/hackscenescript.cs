@@ -46,7 +46,6 @@ public class hackscenescript : MonoBehaviour
             //GetComponent<playercontroller>().triggerhack = trigger;
 
         }
-<<<<<<< HEAD
         if (other.tag == "hack camera 2")
         {
             triggerKey = true;
@@ -58,9 +57,6 @@ public class hackscenescript : MonoBehaviour
             triggerCard = true;
         }
         if (other.tag == "hack card 2")
-=======
-        if(other.tag == "hack card")
->>>>>>> parent of 19bc0f1 (assoma)
         {
             triggerCard = true;
         }

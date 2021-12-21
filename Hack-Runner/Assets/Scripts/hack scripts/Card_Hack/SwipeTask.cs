@@ -38,6 +38,7 @@ private float _countdown =0;
     {
         if (wasSuccessful) {
             green_On.SetActive(true);
+            Application.LoadLevel(4);
         }
     else
         {
