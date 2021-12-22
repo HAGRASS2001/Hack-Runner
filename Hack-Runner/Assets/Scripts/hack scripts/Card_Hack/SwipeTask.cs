@@ -21,6 +21,7 @@ private float _countdown =0;
 
     private void Start()
     {
+
         check.SetActive(false);
     }
     private void Update()
@@ -38,7 +39,8 @@ private float _countdown =0;
     {
         if (wasSuccessful) {
             green_On.SetActive(true);
-            Application.LoadLevel(4);
+            FindObjectOfType<hackscenescript>().triggerCard = false;
+            check.SetActive(false);
         }
     else
         {

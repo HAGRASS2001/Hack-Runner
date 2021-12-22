@@ -27,10 +27,6 @@ public class keyunlock : MonoBehaviour
         if (counter == 5 && counter2 ==5) {
             x.SetActive(false);
             player.constraints = RigidbodyConstraints2D.FreezeRotation;
-            for (int i = 0; i < 10; i++)
-            {
-                numbers[i].interactable = true;
-            }
         }
         else if (counter > 5)
         {

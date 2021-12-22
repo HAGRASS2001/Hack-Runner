@@ -9,6 +9,7 @@ public class hackscenescript : MonoBehaviour
     public bool triggerKey = false;
     public bool triggerCard = false;
     public GameObject hackcheck;
+    public GameObject cardhack;
     public Rigidbody2D player;
     // Start is called before the first frame update
     void Start()
@@ -33,7 +34,7 @@ public class hackscenescript : MonoBehaviour
                 player.constraints = RigidbodyConstraints2D.FreezeAll;
                 //FindObjectOfType<keyunlock>().x.SetActive(true);
                 FindObjectOfType<SwipeTask>().check.SetActive(true);
-                hackcheck.SetActive(false);
+                cardhack.SetActive(false);
             }
         }
     }
@@ -52,7 +53,7 @@ public class hackscenescript : MonoBehaviour
             //GetComponent<playercontroller>().triggerhack = trigger;
 
         }
-        if (other.tag == "hack card 1")
+        if (other.tag == "hack card")
         {
             triggerCard = true;
         }
