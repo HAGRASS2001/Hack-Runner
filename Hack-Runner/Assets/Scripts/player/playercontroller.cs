@@ -27,8 +27,10 @@ public class playercontroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        Kick();
+        if (Input.GetKey(kick))
+        {
+            Kick();
+        }
         if (Input.GetKey(spacebar) && grounded)
         {
             jump();
@@ -65,12 +67,11 @@ public class playercontroller : MonoBehaviour
     }
 
     void Kick (){
-            if (Input.GetKey(kick))
-            {
+
             kickk.SetActive(true);
             anim.SetBool("kick", true); 
             StartCoroutine(WaitForHalfASecond());
-            }
+            
     }
     IEnumerator WaitForHalfASecond()
     {
