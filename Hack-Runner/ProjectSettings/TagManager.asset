@@ -12,6 +12,7 @@ TagManager:
   - setactivetrue
   - hack card
   - hack light
+  - hack card 1
   layers:
   - Default
   - TransparentFX
@@ -57,4 +58,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2202883513
+    locked: 0
+  - name: hack
+    uniqueID: 2682314837
     locked: 0
