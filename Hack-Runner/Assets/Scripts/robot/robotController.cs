@@ -12,7 +12,6 @@ public class robotController : MonoBehaviour
     private Animator anim;
     public float minDistance;
     private playercontroller player;
-    private bool runcondition;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,13 +23,15 @@ public class robotController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        runcondition = true;
         if (Vector3.Distance(transform.position, player.transform.position) > minDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, movespeed * Time.deltaTime);
-            runcondition = false;
         }
-        anim.SetBool("runcheck", runcondition);
+        if (Vector3.Distance(transform.position, player.transform.position) < (minDistance-1))
+        {
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, -movespeed * Time.deltaTime);
+        }
+        anim.SetFloat("speed", Mathf.Abs(FindObjectOfType<playercontroller>().GetComponent<Rigidbody2D>().velocity.x));
         flip();
         //transform.position = Vector3.MoveTowards(transform.position, player.transform.position, movespeed * Time.deltaTime);
         //Attack();
