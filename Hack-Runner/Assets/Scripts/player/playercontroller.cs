@@ -70,8 +70,7 @@ public class playercontroller : MonoBehaviour
 
             kickk.SetActive(true);
             anim.SetBool("kick", true); 
-            StartCoroutine(WaitForHalfASecond());
-            
+            StartCoroutine(WaitForHalfASecond());        
     }
     IEnumerator WaitForHalfASecond()
     {
