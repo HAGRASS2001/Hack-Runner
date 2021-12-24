@@ -722,6 +722,17 @@ PrefabInstance:
       propertyPath: movespeed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4058689579794166513, guid: d8401ee2d3290294d91d765164376070,
+        type: 3}
+      propertyPath: characterDB
+      value: 
+      objectReference: {fileID: 11400000, guid: 8178d6b0a4c72604a9739fdfa4c0a5b5,
+        type: 2}
+    - target: {fileID: 4058689579794166513, guid: d8401ee2d3290294d91d765164376070,
+        type: 3}
+      propertyPath: artworkSprite
+      value: 
+      objectReference: {fileID: 256976092}
     - target: {fileID: 4058689579794166515, guid: d8401ee2d3290294d91d765164376070,
         type: 3}
       propertyPath: m_Offset.x
@@ -819,6 +830,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8401ee2d3290294d91d765164376070, type: 3}
+--- !u!212 &256976092 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4058689579794166524, guid: d8401ee2d3290294d91d765164376070,
+    type: 3}
+  m_PrefabInstance: {fileID: 256976091}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &295972052
 GameObject:
   m_ObjectHideFlags: 0
