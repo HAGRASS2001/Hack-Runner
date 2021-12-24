@@ -38,7 +38,7 @@ public class walkerenemy : enemyController {
 		{
 			attack();
 			FindObjectOfType<playerstats>().takedamage(damage);
-			flip();
+			//flip();
 		}
 		if (other.gameObject.tag == "playerkick")
 		{
