@@ -23,8 +23,8 @@ public class walkerenemy : enemyController {
 		}
 			
 	}
-
-	private void OnTriggerEnter2D(Collider2D other)
+    
+    private void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.tag == "wall")
 		{
@@ -36,9 +36,15 @@ public class walkerenemy : enemyController {
 		}
 		if (other.tag == "Player")
 		{
-			attack();
-			FindObjectOfType<playerstats>().takedamage(damage);
-			flip();
+			
+
+				attack();
+				FindObjectOfType<playerstats>().takedamage(damage);
+
+			
+			
+			
+			//flip();
 		}
 		if (other.gameObject.tag == "playerkick")
 		{
