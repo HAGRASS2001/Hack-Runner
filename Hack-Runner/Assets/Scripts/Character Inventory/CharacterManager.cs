@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+
 
 public class CharacterManager : MonoBehaviour
 {
@@ -12,18 +15,28 @@ public class CharacterManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (!PlayerPrefs.HasKey("selectedOption"))
+        {
+
+            selectedOption = 0;
+        }
+        else
+        {
+            Load();
+        }
         UpdateCharacter(selectedOption);
 
     }
     public void NextOption()
     {
-        selectedOption ++;
+        selectedOption++;
         if (selectedOption >= characterDB.CharacterCount)
         {
             selectedOption = 0;
         }
 
         UpdateCharacter(selectedOption);
+        Save();
     }
 
 
@@ -32,28 +45,45 @@ public class CharacterManager : MonoBehaviour
         selectedOption--;
         if (selectedOption < 0)
         {
-            selectedOption= characterDB.CharacterCount - 1;
+            selectedOption = characterDB.CharacterCount - 1;
         }
 
         UpdateCharacter(selectedOption);
-
+        Save();
     }
+
+
+    private void UpdateCharacter(int selectedOption)
+    {
+        Character character = characterDB.GetCharacter(selectedOption);
+        artworkSprite.sprite = character.characterSprite;
+        nameText.text = character.characterName;
+    }
+
+
+    private void Load()
+    {
+        selectedOption = PlayerPrefs.GetInt("selectedOption");
+    }
+    private void Save()
+    {
+        PlayerPrefs.SetInt("selectedOption", selectedOption);
+    }
+
 
     public void PlayButton()
     {
         Application.LoadLevel("scene3 with all hacks");
     }
 
+    //public void ChangeScene(int sceneID) {
+    //    SceneManager.LoadScene(sceneID);
 
-    private void UpdateCharacter(int selectedOption) { 
-    Character character = characterDB.GetCharacter(selectedOption);
-    artworkSprite.sprite = character.characterSprite;
-        nameText.text = character.characterName;
-            }
 
-// Update is called once per frame
-void Update()
+    //}
+    // Update is called once per frame
+    void Update()
     {
-        
+
     }
 }

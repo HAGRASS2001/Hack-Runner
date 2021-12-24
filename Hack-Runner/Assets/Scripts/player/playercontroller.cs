@@ -18,10 +18,25 @@ public class playercontroller : MonoBehaviour
     private Animator anim;
     public GameObject kickk;
     // Start is called before the first frame update
+    public CharacterDatabase characterDB;
+    public SpriteRenderer artworkSprite;
+    private int selectedOption = 0;
     void Start()
     {
         isfacingright = true;
         anim = GetComponent<Animator>();
+
+
+        if (!PlayerPrefs.HasKey("selectedOption"))
+        {
+
+            selectedOption = 0;
+        }
+        else
+        {
+            Load();
+        }
+        UpdateCharacter(selectedOption);
     }
 
     // Update is called once per frame
@@ -91,5 +106,21 @@ public class playercontroller : MonoBehaviour
             kickk.SetActive(true);
             StartCoroutine(WaitForHalfASecond2());
         }
+    }
+
+    private void UpdateCharacter(int selectedOption)
+    {
+        Character character = characterDB.GetCharacter(selectedOption);
+        artworkSprite.sprite = character.characterSprite;
+    }
+
+
+    private void Load()
+    {
+        selectedOption = PlayerPrefs.GetInt("selectedOption");
+    }
+    private void Save()
+    {
+        PlayerPrefs.SetInt("selectedOption", selectedOption);
     }
 }
