@@ -15,6 +15,7 @@ public class enemyController : MonoBehaviour {
 	void Update () {
 		
 	}
+
 	public void flip()
 	{
 		isfacingright = !(isfacingright);
