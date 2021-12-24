@@ -11,10 +11,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Level1/scene2.unity
     guid: 450855a62914f44418bd54a6769bbf02
-  - enabled: 1
-    path: Assets/Scenes/Levels/Level1/scene3Backup.unity
-    guid: f2079d84238d88848bc8d01f20b94089
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/hack scenes/key-hack.unity
     guid: e4f4982668868aa438a8d00043cbd30c
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 39ef62d907cacd346953f2fb743ef064
+  - enabled: 1
+    path: Assets/Scenes/characterInventory.unity
+    guid: d0d2a30e54f53ec4a958998308f97b84
+  - enabled: 1
+    path: Assets/Scenes/Inventory.unity
+    guid: 13f45e35ba489f24f8dd43ac87974ae8
   m_configObjects: {}

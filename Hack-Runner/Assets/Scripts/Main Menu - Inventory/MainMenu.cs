@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
     public GameObject Menu;
     public void PlayGame()
     {
-        SceneManager.LoadScene("characterInventory");
+        SceneManager.LoadScene("Inventory");
     }
     public void QuitGame()
     {

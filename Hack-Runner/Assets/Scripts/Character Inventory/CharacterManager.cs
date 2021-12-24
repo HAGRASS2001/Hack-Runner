@@ -39,6 +39,11 @@ public class CharacterManager : MonoBehaviour
 
     }
 
+    public void PlayButton()
+    {
+        Application.LoadLevel("scene3 with all hacks");
+    }
+
 
     private void UpdateCharacter(int selectedOption) { 
     Character character = characterDB.GetCharacter(selectedOption);
