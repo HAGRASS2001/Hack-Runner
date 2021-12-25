@@ -8,7 +8,9 @@ public class PlayerGuidance : MonoBehaviour
     public GameObject guidance1Part2;
     public bool interactionCheck;
     public GameObject guidance2;
+    public GameObject guidance2part2;
     public GameObject guidance3;
+    public GameObject guidance3part2;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,14 +18,12 @@ public class PlayerGuidance : MonoBehaviour
         guidance2.SetActive(false);
         guidance3.SetActive(false);
         guidance1Part2.SetActive(false);
+        guidance2part2.SetActive(false);
+        guidance3part2.SetActive(false);
     }
     public void ReturnInteraction()
     {
-        interactionCheck = FindObjectOfType<hackscenescript>().interactionCheck;
-        if(interactionCheck == true)
-        {
-            guidance1Part2.SetActive(true);
-        }
+
     }
     // Update is called once per frame
     void Update()

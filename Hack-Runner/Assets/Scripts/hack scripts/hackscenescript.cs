@@ -15,6 +15,9 @@ public class hackscenescript : MonoBehaviour
     public Rigidbody2D player;
     public GameObject interaction;
     public bool interactionCheck;
+    private bool guidance1Check = false;
+    private bool guidance2Check = false;
+    private bool guidance3Check = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +40,10 @@ public class hackscenescript : MonoBehaviour
                 hackcheck.SetActive(false);
                 interaction.SetActive(false);
                 FindObjectOfType<PlayerGuidance>().guidance1.SetActive(false);
-                FindObjectOfType<PlayerGuidance>().ReturnInteraction();
+                if (guidance1Check == true)
+                {
+                    FindObjectOfType<PlayerGuidance>().guidance1Part2.SetActive(true);
+                }
             }
             if (triggerCard == true)
             {
@@ -46,6 +52,11 @@ public class hackscenescript : MonoBehaviour
                 //FindObjectOfType<keyunlock>().x.SetActive(true);
                 cardhack.SetActive(false);
                 interaction.SetActive(false);
+                FindObjectOfType<PlayerGuidance>().guidance2.SetActive(false);
+                if (guidance2Check == true)
+                {
+                    FindObjectOfType<PlayerGuidance>().guidance2part2.SetActive(true);
+                }
             }
             if (triggerlight == true)
             {
@@ -53,6 +64,7 @@ public class hackscenescript : MonoBehaviour
                 FindObjectOfType<lighthackonandoff>().lighthack.SetActive(true);
                 lighthack.SetActive(false);
                 interaction.SetActive(false);
+                guidance3Check = true;
             }
         }
     }
@@ -65,7 +77,7 @@ public class hackscenescript : MonoBehaviour
             interaction.SetActive(true);
             FindObjectOfType<PlayerGuidance>().guidance1.SetActive(true);
             //GetComponent<playercontroller>().triggerhack = trigger;
-
+            guidance1Check = true;
         }
         if (other.tag == "hack camera 2")
         {
@@ -78,6 +90,8 @@ public class hackscenescript : MonoBehaviour
         {
             interaction.SetActive(true);
             triggerCard = true;
+            FindObjectOfType<PlayerGuidance>().guidance2.SetActive(true);
+            guidance2Check = true;
         }
         if (other.tag == "hack light")
         {
@@ -89,6 +103,7 @@ public class hackscenescript : MonoBehaviour
             triggerCard = false;
             interaction.SetActive(false);
             FindObjectOfType<PlayerGuidance>().guidance1.SetActive(false);
+            FindObjectOfType<PlayerGuidance>().guidance2.SetActive(false);
             //GetComponent<playercontroller>().triggerhack = trigger;
         }
     }
