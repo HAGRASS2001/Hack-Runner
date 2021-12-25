@@ -41,6 +41,7 @@ private float _countdown =0;
             green_On.SetActive(true);
             FindObjectOfType<hackscenescript>().triggerCard = false;
             check.SetActive(false);
+            FindObjectOfType<hackscenescript>().player.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
     else
         {
