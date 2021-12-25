@@ -20,6 +20,7 @@ public class hackscenescript : MonoBehaviour
     private bool guidance2Check = false;
     private bool guidance3Check = false;
     public bool scene2;
+    public bool scene2LVL2;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +36,10 @@ public class hackscenescript : MonoBehaviour
             if (scene2 == true)
             {
                 Application.LoadLevel(5);
+            }
+            else if (scene2LVL2 == true)
+            {
+                Application.LoadLevel(7);
             }
         }
         if (Input.GetKey(e))
@@ -86,6 +91,9 @@ public class hackscenescript : MonoBehaviour
         if (other.tag == "gotoscene2")
         {
             scene2 = true;
+        }else if(other.tag == "gotoscene2LVL2")
+        {
+            scene2LVL2 = true;
         }
         if (other.tag == "hack")
         {

@@ -14,6 +14,7 @@ TagManager:
   - hack light
   - hack card 1
   - gotoscene2
+  - gotoscene2LVL2
   layers:
   - Default
   - TransparentFX
