@@ -6,22 +6,11 @@ public class enemyController : MonoBehaviour {
 	public bool isfacingright = false;
 	public float maxspeed = 3f;
 	public int damage = 1;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
 	public void flip()
 	{
-		isfacingright = !(isfacingright);
+		isfacingright = !isfacingright;
 		transform.localScale = new Vector3(-(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-
-
 
 	}
 
