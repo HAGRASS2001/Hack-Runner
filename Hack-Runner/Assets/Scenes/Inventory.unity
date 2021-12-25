@@ -472,6 +472,7 @@ MonoBehaviour:
   characterDB: {fileID: 11400000, guid: 8178d6b0a4c72604a9739fdfa4c0a5b5, type: 2}
   nameText: {fileID: 1237249705}
   artworkSprite: {fileID: 254024202}
+  selectedOption: 0
 --- !u!212 &254024202
 SpriteRenderer:
   m_ObjectHideFlags: 0

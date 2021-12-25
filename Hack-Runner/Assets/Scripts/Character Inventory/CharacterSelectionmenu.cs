@@ -39,21 +39,21 @@ public class CharacterSelectionmenu : MonoBehaviour
         }
 
 
-    public void PreviousCharacter()
-    {
-        playerObjects[selectedCharacter].SetActive(false);
-        selectedCharacter--;
-        if (selectedCharacter < 0)
-        {
-            selectedCharacter = playerObjects.Length - 1;
-            playerObjects[selectedCharacter].SetActive(true);
-        }
-    }
+    //public void PreviousCharacter()
+    //{
+    //    playerObjects[selectedCharacter].SetActive(false);
+    //    selectedCharacter--;
+    //    if (selectedCharacter < 0)
+    //    {
+    //        selectedCharacter = playerObjects.Length - 1;
+    //        playerObjects[selectedCharacter].SetActive(true);
+    //    }
+    //}
 
     public void PlayButton()
     {
         PlayerPrefs.SetInt(selectedCharacterDataName, selectedCharacter);
-        Application.LoadLevel("scene3 with all hacks");
+        Application.LoadLevel("scene3 with all hacks test");
     }
 
 

@@ -8,7 +8,7 @@ public class lighthackonandoff : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lighthack.SetActive(false);
+        //lighthack.SetActive(false);
     }
 
     // Update is called once per frame
