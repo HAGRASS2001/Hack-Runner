@@ -104,8 +104,8 @@ public class hackscenescript : MonoBehaviour
         }
         if (other.tag == "hack card")
         {
-            interaction.SetActive(true);
             triggerCard = true;
+            interaction.SetActive(true);
             FindObjectOfType<PlayerGuidance>().guidance2.SetActive(true);
             guidance2Check = true;
         }
