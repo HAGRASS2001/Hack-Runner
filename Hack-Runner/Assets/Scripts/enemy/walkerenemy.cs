@@ -3,24 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class walkerenemy : enemyController {
-	private playercontroller Player;
 	private Animator anim;
 	public Rigidbody2D enemy;
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();
-		Player = FindObjectOfType<playercontroller>();
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		//transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, maxspeed * Time.deltaTime);
-
-		//if (Player.transform.position.x < gameObject.transform.position.x && isfacingright)
-		//	flip();
-
-		//if (Player.transform.position.x > gameObject.transform.position.x && !isfacingright)
-		//	flip();
+	void Update ()
+	{
 
 	}
 	void FixedUpdate() {
