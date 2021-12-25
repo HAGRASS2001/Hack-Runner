@@ -3,23 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class walkerenemy : enemyController {
-	private playercontroller Player;
 	private Animator anim;
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();
-		Player = FindObjectOfType<playercontroller>();
+		flip();
+
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, maxspeed * Time.deltaTime);
-
-		if (Player.transform.position.x < gameObject.transform.position.x && isfacingright)
-			flip();
-
-		if (Player.transform.position.x > gameObject.transform.position.x && !isfacingright)
-			flip();
+	void Update ()
+	{
 
 	}
 	void FixedUpdate() {
@@ -44,15 +38,8 @@ public class walkerenemy : enemyController {
 		}
 		if (other.tag == "Player")
 		{
-			
-
 				attack();
 				FindObjectOfType<playerstats>().takedamage(damage);
-
-			
-			
-			
-			
 		}
 		if (other.gameObject.tag == "playerkick")
 		{

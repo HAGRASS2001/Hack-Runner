@@ -23,9 +23,10 @@ public class wintext : MonoBehaviour
     public void switchchange(int points) {
         oncount += points;
         if (oncount ==  switchcount) {
-            WinText.SetActive(true);
+            //WinText.SetActive(true);
             FindObjectOfType<lighthackonandoff>().lighthack.SetActive(false);
             FindObjectOfType<hackscenescript>().player.constraints = RigidbodyConstraints2D.FreezeRotation;
+
         }
     }
 }
