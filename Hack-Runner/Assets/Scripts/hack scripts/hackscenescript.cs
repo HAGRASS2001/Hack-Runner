@@ -62,9 +62,13 @@ public class hackscenescript : MonoBehaviour
             {
                 player.constraints = RigidbodyConstraints2D.FreezeAll;
                 FindObjectOfType<lighthackonandoff>().lighthack.SetActive(true);
+                FindObjectOfType<PlayerGuidance>().guidance3.SetActive(false);
                 lighthack.SetActive(false);
                 interaction.SetActive(false);
-                guidance3Check = true;
+                if(guidance3Check == true)
+                {
+                    FindObjectOfType<PlayerGuidance>().guidance3part2.SetActive(true);
+                }
             }
         }
     }
@@ -97,6 +101,8 @@ public class hackscenescript : MonoBehaviour
         {
             triggerlight = true;
             interaction.SetActive(true);
+            FindObjectOfType<PlayerGuidance>().guidance3.SetActive(true);
+            guidance3Check = true;
         }
         if (other.tag == "end") {
             triggerKey = false;
@@ -104,7 +110,13 @@ public class hackscenescript : MonoBehaviour
             interaction.SetActive(false);
             FindObjectOfType<PlayerGuidance>().guidance1.SetActive(false);
             FindObjectOfType<PlayerGuidance>().guidance2.SetActive(false);
+            FindObjectOfType<PlayerGuidance>().guidance3.SetActive(false);
             //GetComponent<playercontroller>().triggerhack = trigger;
+        }
+        else
+        {
+            FindObjectOfType<PlayerGuidance>().guidance2part2.SetActive(false);
+            FindObjectOfType<PlayerGuidance>().guidance3part2.SetActive(false);
         }
     }
 
