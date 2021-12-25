@@ -27,7 +27,7 @@ public class keyunlock : MonoBehaviour
         if (counter == 5 && counter2 ==5) {
             x.SetActive(false);
             player.constraints = RigidbodyConstraints2D.FreezeRotation;
-            FindObjectOfType<PlayerGuidance>().guidance1Part2.SetActive(false);
+ 
         }
         else if (counter > 5)
         {
