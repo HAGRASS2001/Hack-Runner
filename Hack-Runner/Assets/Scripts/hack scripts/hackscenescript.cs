@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class hackscenescript : MonoBehaviour
 {
     public KeyCode e;
+    public KeyCode w;
     public bool triggerKey = false;
     public bool triggerCard = false;
     public bool triggerlight = false;
@@ -18,6 +19,7 @@ public class hackscenescript : MonoBehaviour
     private bool guidance1Check = false;
     private bool guidance2Check = false;
     private bool guidance3Check = false;
+    public bool scene2;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,12 @@ public class hackscenescript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(w)) {
+            if (scene2 == true)
+            {
+                Application.LoadLevel(5);
+            }
+        }
         if (Input.GetKey(e))
         {
             if (triggerKey == true)
@@ -75,6 +83,10 @@ public class hackscenescript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.tag == "gotoscene2")
+        {
+            scene2 = true;
+        }
         if (other.tag == "hack")
         {
             triggerKey = true;

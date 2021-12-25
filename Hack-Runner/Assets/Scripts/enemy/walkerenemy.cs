@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class walkerenemy : enemyController {
 	private Animator anim;
-	public Rigidbody2D enemy;
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();
+		flip();
+
 	}
 	
 	// Update is called once per frame
