@@ -5,6 +5,7 @@ using UnityEngine;
 public class walkerenemy : enemyController {
 	private playercontroller Player;
 	private Animator anim;
+	public Rigidbody2D enemy;
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();
@@ -13,13 +14,13 @@ public class walkerenemy : enemyController {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, maxspeed * Time.deltaTime);
+		//transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, maxspeed * Time.deltaTime);
 
-		if (Player.transform.position.x < gameObject.transform.position.x && isfacingright)
-			flip();
+		//if (Player.transform.position.x < gameObject.transform.position.x && isfacingright)
+		//	flip();
 
-		if (Player.transform.position.x > gameObject.transform.position.x && !isfacingright)
-			flip();
+		//if (Player.transform.position.x > gameObject.transform.position.x && !isfacingright)
+		//	flip();
 
 	}
 	void FixedUpdate() {
@@ -44,15 +45,8 @@ public class walkerenemy : enemyController {
 		}
 		if (other.tag == "Player")
 		{
-			
-
 				attack();
 				FindObjectOfType<playerstats>().takedamage(damage);
-
-			
-			
-			
-			
 		}
 		if (other.gameObject.tag == "playerkick")
 		{
