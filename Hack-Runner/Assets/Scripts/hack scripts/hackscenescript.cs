@@ -25,6 +25,8 @@ public class hackscenescript : MonoBehaviour
     private bool scene2LVL2;
     private bool gotolvl1scene3;
     public Canvas dontdestroy;
+    public GameObject dontdestroy2;
+    public GameObject dontdestroy3;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +43,10 @@ public class hackscenescript : MonoBehaviour
             if (scene2 == true)
             {
                 DontDestroyOnLoad(FindObjectOfType<playercontroller>().gameObject);
+                SceneInteracftion.SetActive(false);
                 DontDestroyOnLoad(dontdestroy);
+                DontDestroyOnLoad(dontdestroy2);
+                DontDestroyOnLoad(dontdestroy3);
                 Application.LoadLevel(5);
             }
             if (scene2LVL2 == true)

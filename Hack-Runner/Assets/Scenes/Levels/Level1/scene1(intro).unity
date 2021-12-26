@@ -2016,7 +2016,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1021652986
 Transform:
   m_ObjectHideFlags: 0
@@ -2599,7 +2599,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1484117708
 Transform:
   m_ObjectHideFlags: 0
@@ -4349,12 +4349,12 @@ PrefabInstance:
     - target: {fileID: 2481417048563431810, guid: d8401ee2d3290294d91d765164376070,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.13
+      value: -7.96
       objectReference: {fileID: 0}
     - target: {fileID: 2481417048563431810, guid: d8401ee2d3290294d91d765164376070,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.3
+      value: -1.97
       objectReference: {fileID: 0}
     - target: {fileID: 2481417050169552899, guid: d8401ee2d3290294d91d765164376070,
         type: 3}
@@ -4388,6 +4388,16 @@ PrefabInstance:
       propertyPath: SceneInteracftion
       value: 
       objectReference: {fileID: 1021652985}
+    - target: {fileID: 2481417050169552899, guid: d8401ee2d3290294d91d765164376070,
+        type: 3}
+      propertyPath: dontdestroy2
+      value: 
+      objectReference: {fileID: 1887957801}
+    - target: {fileID: 2481417050169552899, guid: d8401ee2d3290294d91d765164376070,
+        type: 3}
+      propertyPath: dontdestroy3
+      value: 
+      objectReference: {fileID: 186610431}
     - target: {fileID: 2481417050169552909, guid: d8401ee2d3290294d91d765164376070,
         type: 3}
       propertyPath: healthicon1

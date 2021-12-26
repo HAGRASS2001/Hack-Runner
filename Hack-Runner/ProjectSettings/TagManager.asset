@@ -18,6 +18,7 @@ TagManager:
   - GameGuidance1
   - gotolvl1scene3
   - gotolvl3scene1
+  - location
   layers:
   - Default
   - TransparentFX
