@@ -17,8 +17,9 @@ public class playercontroller : MonoBehaviour
     private bool grounded;
     private Animator anim;
     public GameObject kickk;
+    public GameObject kickk2;
     // Start is called before the first frame update
-    
+
     void Start()
     {
         isfacingright = true;
@@ -73,6 +74,7 @@ public class playercontroller : MonoBehaviour
     void Kick (){
 
             kickk.SetActive(true);
+            kickk2.SetActive(true);
             anim.SetBool("kick", true); 
             StartCoroutine(WaitForHalfASecond());        
     }
@@ -80,6 +82,7 @@ public class playercontroller : MonoBehaviour
     {
         yield return new WaitForSeconds(1/32);
         kickk.SetActive(false);
+        kickk2.SetActive(false);
         anim.SetBool("kick", false);
     }
     IEnumerator WaitForHalfASecond2()
@@ -96,6 +99,4 @@ public class playercontroller : MonoBehaviour
             StartCoroutine(WaitForHalfASecond2());
         }
     }
-
-  
 }
