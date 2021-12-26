@@ -2016,7 +2016,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1021652986
 Transform:
   m_ObjectHideFlags: 0
@@ -2599,7 +2599,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1484117708
 Transform:
   m_ObjectHideFlags: 0
@@ -4354,7 +4354,7 @@ PrefabInstance:
     - target: {fileID: 2481417048563431810, guid: d8401ee2d3290294d91d765164376070,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.97
+      value: -2.36
       objectReference: {fileID: 0}
     - target: {fileID: 2481417050169552899, guid: d8401ee2d3290294d91d765164376070,
         type: 3}
@@ -4365,14 +4365,12 @@ PrefabInstance:
         type: 3}
       propertyPath: cardhack
       value: 
-      objectReference: {fileID: 7000158293473689694, guid: 39ba527d8bcf8e84999a0626c732d538,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 2481417050169552899, guid: d8401ee2d3290294d91d765164376070,
         type: 3}
       propertyPath: lighthack
       value: 
-      objectReference: {fileID: 5567964181009183988, guid: 92f90bb07bbdb614097e88dce877b208,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 2481417050169552899, guid: d8401ee2d3290294d91d765164376070,
         type: 3}
       propertyPath: dontdestroy
@@ -4392,12 +4390,22 @@ PrefabInstance:
         type: 3}
       propertyPath: dontdestroy2
       value: 
-      objectReference: {fileID: 1887957801}
+      objectReference: {fileID: 186610431}
     - target: {fileID: 2481417050169552899, guid: d8401ee2d3290294d91d765164376070,
         type: 3}
       propertyPath: dontdestroy3
       value: 
-      objectReference: {fileID: 186610431}
+      objectReference: {fileID: 1887957801}
+    - target: {fileID: 2481417050169552899, guid: d8401ee2d3290294d91d765164376070,
+        type: 3}
+      propertyPath: w
+      value: 119
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481417050169552899, guid: d8401ee2d3290294d91d765164376070,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1563582995}
     - target: {fileID: 2481417050169552909, guid: d8401ee2d3290294d91d765164376070,
         type: 3}
       propertyPath: healthicon1

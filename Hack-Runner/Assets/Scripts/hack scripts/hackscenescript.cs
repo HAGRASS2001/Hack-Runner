@@ -55,8 +55,11 @@ public class hackscenescript : MonoBehaviour
             }
             if (gotolvl1scene3 == true)
             {
-                //DontDestroyOnLoad(FindObjectOfType<playercontroller>().gameObject);
-                //DontDestroyOnLoad(dontdestroy);
+                DontDestroyOnLoad(FindObjectOfType<playercontroller>().gameObject);
+                SceneInteracftion.SetActive(false);
+                DontDestroyOnLoad(dontdestroy);
+                DontDestroyOnLoad(dontdestroy2);
+                DontDestroyOnLoad(dontdestroy3);
                 Application.LoadLevel(8);
             }
         }
