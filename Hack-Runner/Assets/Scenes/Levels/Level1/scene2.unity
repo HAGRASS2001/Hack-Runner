@@ -947,6 +947,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &832285218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 832285220}
+  - component: {fileID: 832285219}
+  m_Layer: 0
+  m_Name: gotolvl1scene3
+  m_TagString: gotolvl1scene3
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &832285219
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832285218}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.3234863, y: -0.49517345}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.4870033, y: 1.9903469}
+  m_EdgeRadius: 0
+--- !u!4 &832285220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832285218}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 73.09, y: -2.07, z: -0.39453125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &893166254 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7000158293473689694, guid: 39ba527d8bcf8e84999a0626c732d538,
@@ -1019,6 +1076,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: hack 2nd
+      objectReference: {fileID: 0}
+    - target: {fileID: 7000158293473689694, guid: 39ba527d8bcf8e84999a0626c732d538,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39ba527d8bcf8e84999a0626c732d538, type: 3}
@@ -1696,8 +1758,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1220473045}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 66.93, y: 0.75, z: 0}
-  m_LocalScale: {x: 1.1626023, y: 1.0165112, z: 1}
+  m_LocalPosition: {x: 69.528, y: 0.75, z: 0}
+  m_LocalScale: {x: 1.4332428, y: 1.0165112, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 19
@@ -2796,6 +2858,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: hack 3rd
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567964181009183988, guid: 92f90bb07bbdb614097e88dce877b208,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5567964181009183989, guid: 92f90bb07bbdb614097e88dce877b208,
         type: 3}

@@ -16,6 +16,7 @@ TagManager:
   - gotoscene2
   - gotoscene2LVL2
   - GameGuidance1
+  - gotolvl1scene3
   layers:
   - Default
   - TransparentFX
