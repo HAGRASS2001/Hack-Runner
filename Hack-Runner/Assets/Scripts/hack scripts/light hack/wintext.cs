@@ -26,6 +26,7 @@ public class wintext : MonoBehaviour
             //WinText.SetActive(true);
             FindObjectOfType<lighthackonandoff>().lighthack.SetActive(false);
             FindObjectOfType<hackscenescript>().player.constraints = RigidbodyConstraints2D.FreezeRotation;
+            FindObjectOfType<PlayerGuidance>().guidance3part2.SetActive(false);
 
         }
     }

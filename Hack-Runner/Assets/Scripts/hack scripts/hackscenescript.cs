@@ -139,6 +139,7 @@ public class hackscenescript : MonoBehaviour
         }
         else
         {
+            FindObjectOfType<PlayerGuidance>().guidance1Part2.SetActive(false);
             FindObjectOfType<PlayerGuidance>().guidance2part2.SetActive(false);
             FindObjectOfType<PlayerGuidance>().guidance3part2.SetActive(false);
         }
