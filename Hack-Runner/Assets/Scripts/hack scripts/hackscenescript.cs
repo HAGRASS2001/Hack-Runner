@@ -15,6 +15,7 @@ public class hackscenescript : MonoBehaviour
     public GameObject lighthack;
     public Rigidbody2D player;
     public GameObject interaction;
+    public GameObject SceneInteracftion;
     public bool interactionCheck;
     private bool guidance1Check = false;
     private bool guidance2Check = false;
@@ -27,6 +28,7 @@ public class hackscenescript : MonoBehaviour
     void Start()
     {
         interactionCheck = false;
+        SceneInteracftion.SetActive(false);
         player = FindObjectOfType<playercontroller>().gameObject.GetComponent<Rigidbody2D>();
         interaction.SetActive(false);
     }
@@ -101,6 +103,7 @@ public class hackscenescript : MonoBehaviour
     {
         if (other.tag == "gotoscene2")
         {
+            SceneInteracftion.SetActive(true);
             scene2 = true;
         }
         if(other.tag == "gotoscene2LVL2")
@@ -149,6 +152,7 @@ public class hackscenescript : MonoBehaviour
             triggerCard = false;
             triggerlight = false;
             interaction.SetActive(false);
+            SceneInteracftion.SetActive(false);
             FindObjectOfType<PlayerGuidance>().guidance1.SetActive(false);
             FindObjectOfType<PlayerGuidance>().guidance2.SetActive(false);
             FindObjectOfType<PlayerGuidance>().guidance3.SetActive(false);
