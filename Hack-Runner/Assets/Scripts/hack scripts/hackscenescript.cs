@@ -83,6 +83,7 @@ public class hackscenescript : MonoBehaviour
                     FindObjectOfType<PlayerGuidance>().guidance3part2.SetActive(true);
                 }
             }
+            
         }
     }
 
@@ -124,6 +125,9 @@ public class hackscenescript : MonoBehaviour
             FindObjectOfType<PlayerGuidance>().guidance3.SetActive(true);
             guidance3Check = true;
         }
+
+       
+
         if (other.tag == "end") {
             triggerKey = false;
             triggerCard = false;
