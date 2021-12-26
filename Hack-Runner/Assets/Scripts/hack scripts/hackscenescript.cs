@@ -21,6 +21,7 @@ public class hackscenescript : MonoBehaviour
     private bool guidance3Check = false;
     public bool scene2;
     public bool scene2LVL2;
+    public Canvas dontdestroy;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +36,8 @@ public class hackscenescript : MonoBehaviour
         if (Input.GetKey(w)) {
             if (scene2 == true)
             {
+                DontDestroyOnLoad(FindObjectOfType<playercontroller>().gameObject);
+                DontDestroyOnLoad(dontdestroy);
                 Application.LoadLevel(5);
             }
             else if (scene2LVL2 == true)
@@ -91,7 +94,8 @@ public class hackscenescript : MonoBehaviour
         if (other.tag == "gotoscene2")
         {
             scene2 = true;
-        }else if(other.tag == "gotoscene2LVL2")
+        }
+        if(other.tag == "gotoscene2LVL2")
         {
             scene2LVL2 = true;
         }

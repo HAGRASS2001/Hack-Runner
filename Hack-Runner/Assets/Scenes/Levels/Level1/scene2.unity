@@ -2324,6 +2324,11 @@ PrefabInstance:
       propertyPath: livesicon2
       value: 
       objectReference: {fileID: 1553945819}
+    - target: {fileID: 3711225279990486190, guid: d8401ee2d3290294d91d765164376070,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3711225279990486191, guid: d8401ee2d3290294d91d765164376070,
         type: 3}
       propertyPath: hackcheck
