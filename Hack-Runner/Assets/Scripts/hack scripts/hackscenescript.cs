@@ -75,8 +75,8 @@ public class hackscenescript : MonoBehaviour
             {
                 player.constraints = RigidbodyConstraints2D.FreezeAll;
                 FindObjectOfType<lighthackonandoff>().lighthack.SetActive(true);
-                FindObjectOfType<PlayerGuidance>().guidance3.SetActive(false);
                 lighthack.SetActive(false);
+                FindObjectOfType<PlayerGuidance>().guidance3.SetActive(false);
                 interaction.SetActive(false);
                 if(guidance3Check == true)
                 {
