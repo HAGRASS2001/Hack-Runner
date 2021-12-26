@@ -24,6 +24,7 @@ public class hackscenescript : MonoBehaviour
     private bool scene2;
     private bool scene2LVL2;
     private bool gotolvl1scene3;
+    private bool gotolvl2scene1;
     public Canvas dontdestroy;
     public GameObject dontdestroy2;
     public GameObject dontdestroy3;
@@ -61,6 +62,15 @@ public class hackscenescript : MonoBehaviour
                 DontDestroyOnLoad(dontdestroy2);
                 DontDestroyOnLoad(dontdestroy3);
                 Application.LoadLevel(8);
+            }
+            if (gotolvl2scene1 == true)
+            {
+                DontDestroyOnLoad(FindObjectOfType<playercontroller>().gameObject);
+                SceneInteracftion.SetActive(false);
+                DontDestroyOnLoad(dontdestroy);
+                DontDestroyOnLoad(dontdestroy2);
+                DontDestroyOnLoad(dontdestroy3);
+                Application.LoadLevel(6);
             }
         }
         if (Input.GetKey(e))
@@ -123,7 +133,11 @@ public class hackscenescript : MonoBehaviour
         {
             gotolvl1scene3 = true;
             SceneInteracftion.SetActive(true);
-
+        }
+        if (other.tag == "gotolvl2scene1")
+        {
+            gotolvl2scene1 = true;
+            SceneInteracftion.SetActive(true);
         }
         if (other.tag == "hack")
         {
