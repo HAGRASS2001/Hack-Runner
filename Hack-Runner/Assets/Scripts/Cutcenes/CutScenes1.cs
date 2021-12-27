@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class CutScenes1 : MonoBehaviour
+public class CutScenes1  : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
