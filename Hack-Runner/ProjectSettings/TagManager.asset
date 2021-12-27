@@ -19,6 +19,9 @@ TagManager:
   - gotolvl1scene3
   - gotolvl3scene1
   - gotolvl2scene1
+  - location
+  - gotolvl2scene2
+  - hack map
   layers:
   - Default
   - TransparentFX

@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Level2/Scene1.unity
     guid: 859c320538200234aa0d032902f6e360
   - enabled: 1
-    path: Assets/Scenes/Levels/Level2/Scene2.unity
+    path: Assets/Scenes/Levels/Level2/Scene2LVL2.unity
     guid: 66baeb17eb40c4c4caf04936473140d7
   - enabled: 1
     path: Assets/Scenes/Levels/Level1/scene3 with all hacks test (Assem).unity
