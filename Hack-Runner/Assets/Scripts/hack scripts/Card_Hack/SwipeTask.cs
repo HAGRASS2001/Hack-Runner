@@ -40,13 +40,15 @@ private float _countdown =0;
         if (wasSuccessful) {
             green_On.SetActive(true);
             FindObjectOfType<hackscenescript>().triggerCard = false;
+            FindObjectOfType<PlayerGuidance>().guidance2part2.SetActive(false);
             check.SetActive(false);
             FindObjectOfType<hackscenescript>().player.constraints = RigidbodyConstraints2D.FreezeRotation;
-            FindObjectOfType<PlayerGuidance>().guidance2part2.SetActive(false);
+            FindObjectOfType<hackscenescript>().interaction.SetActive(false);
         }
     else
         {
             red_On.SetActive(true);
+            FindObjectOfType<playerstats>().takedamage(1);
         }
         yield return new WaitForSeconds(1.5f);
         green_On.SetActive(false);

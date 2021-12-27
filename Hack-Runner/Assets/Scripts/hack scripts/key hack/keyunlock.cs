@@ -36,7 +36,14 @@ public class keyunlock : MonoBehaviour
                 numbers[i].image.color = Color.red;
                 numbers[i].interactable = false;
             }
-            Application.LoadLevel(3);
+            FindObjectOfType<playerstats>().takedamage(1);
+            for (int i = 0; i < 10; i++)
+            {
+                numbers[i].image.color = new Color(0.7169812f, 0.6933073f, 0.6933073f);
+                numbers[i].interactable = true;
+            }
+            counter = 0;
+            counter2 = 0;
         }
     }
 
