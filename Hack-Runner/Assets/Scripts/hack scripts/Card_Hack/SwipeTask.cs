@@ -48,6 +48,7 @@ private float _countdown =0;
     else
         {
             red_On.SetActive(true);
+            FindObjectOfType<playerstats>().takedamage(1);
         }
         yield return new WaitForSeconds(1.5f);
         green_On.SetActive(false);
