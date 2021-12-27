@@ -24,9 +24,11 @@ public class hackscenescript : MonoBehaviour
     private bool scene2;
     private bool scene2LVL2;
     private bool gotolvl1scene3;
+    private bool gotolvl2scene1;
     public Canvas dontdestroy;
     public GameObject dontdestroy2;
     public GameObject dontdestroy3;
+    private GameObject location;
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +64,15 @@ public class hackscenescript : MonoBehaviour
                 DontDestroyOnLoad(dontdestroy3);
                 Application.LoadLevel(8);
             }
+            if (gotolvl2scene1 == true)
+            {
+                DontDestroyOnLoad(FindObjectOfType<playercontroller>().gameObject);
+                SceneInteracftion.SetActive(false);
+                DontDestroyOnLoad(dontdestroy);
+                DontDestroyOnLoad(dontdestroy2);
+                DontDestroyOnLoad(dontdestroy3);
+                Application.LoadLevel(6);
+            }
         }
         if (Input.GetKey(e))
         {
@@ -85,7 +96,7 @@ public class hackscenescript : MonoBehaviour
                 FindObjectOfType<SwipeTask>().check.SetActive(true);
                 //FindObjectOfType<keyunlock>().x.SetActive(true);
                 cardhack.SetActive(false);
-                interaction.SetActive(false);
+                SceneInteracftion.SetActive(false);
                 FindObjectOfType<PlayerGuidance>().guidance2.SetActive(false);
                 if (guidance2Check == true)
                 {
@@ -123,7 +134,11 @@ public class hackscenescript : MonoBehaviour
         {
             gotolvl1scene3 = true;
             SceneInteracftion.SetActive(true);
-
+        }
+        if (other.tag == "gotolvl2scene1")
+        {
+            gotolvl2scene1 = true;
+            SceneInteracftion.SetActive(true);
         }
         if (other.tag == "hack")
         {
@@ -158,6 +173,7 @@ public class hackscenescript : MonoBehaviour
             FindObjectOfType<PlayerGuidance>().guidance1.SetActive(false);
             FindObjectOfType<PlayerGuidance>().guidance2.SetActive(false);
             FindObjectOfType<PlayerGuidance>().guidance3.SetActive(false);
+            FindObjectOfType<PlayerGuidance>().guidance2part2.SetActive(false);
         }
     }
 

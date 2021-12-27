@@ -12,6 +12,10 @@ public class robotController : MonoBehaviour
     private Animator anim;
     public float minDistance;
     private playercontroller player;
+
+    public Transform firepoint;
+    public GameObject bullet;
+    public KeyCode Return;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,7 +58,10 @@ public class robotController : MonoBehaviour
         //        isfacingright = true;
         //    }
         //}
-
+        if (Input.GetKeyDown(Return))
+        {
+            shoot();
+        }
     }
     //void Attack()
     //{
@@ -75,5 +82,12 @@ public class robotController : MonoBehaviour
             isfacingright = FindObjectOfType<playercontroller>().isfacingright;
             transform.localScale = new Vector3(-(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
+    }
+
+
+
+    public void shoot()
+    {
+        Instantiate(bullet, firepoint.position, firepoint.rotation);
     }
 }
