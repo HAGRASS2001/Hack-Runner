@@ -104,9 +104,8 @@ public class camHack : MonoBehaviour
     {
         if (input == "map")
         {
-            Application.Quit();//or go to level 4 
-            //Application.LoadLevel(5);
-
+            Terminal.WriteLine("Done");
+            Invoke("done", 2);
         }
         else
         {
@@ -114,7 +113,12 @@ public class camHack : MonoBehaviour
         }
     }
 
-
+    void done() {
+        FindObjectOfType<finalhackonandoff>().display.SetActive(false);
+        FindObjectOfType<finalhackonandoff>().keyboad.SetActive(false);
+        FindObjectOfType<finalhackonandoff>().Terminal.SetActive(false);
+        FindObjectOfType<PlayerGuidance>().guidance4part2.SetActive(false);
+    }
 
 
 
@@ -123,7 +127,7 @@ public class camHack : MonoBehaviour
     {//Function that calls for the screen //The user will
         currentScreen = Screen.Password;
         Terminal.ClearScreen();
-        Terminal.WriteLine("Hint:password is guard123");
+        //Terminal.WriteLine("Hint:password is guard123");
         Terminal.WriteLine("Enter your Password : ");
         SetPassword();
 

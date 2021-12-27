@@ -79,12 +79,12 @@ public class hackscenescript : MonoBehaviour
             }
             if (gotolvl2scene2 == true)
             {
-                DontDestroyOnLoad(FindObjectOfType<playercontroller>().gameObject);
+                //DontDestroyOnLoad(FindObjectOfType<playercontroller>().gameObject);
                 SceneInteracftion.SetActive(false);
-                DontDestroyOnLoad(dontdestroy);
-                DontDestroyOnLoad(dontdestroy2);
-                DontDestroyOnLoad(dontdestroy3);
-                SceneManager.LoadScene("Scene2LVL2");
+                //DontDestroyOnLoad(dontdestroy);
+                //DontDestroyOnLoad(dontdestroy2);
+                //DontDestroyOnLoad(dontdestroy3);
+                SceneManager.LoadScene(7);
             }
         }
         if (Input.GetKey(e))
@@ -132,13 +132,15 @@ public class hackscenescript : MonoBehaviour
             if (triggerMap == true)
             {
                 player.constraints = RigidbodyConstraints2D.FreezeAll;
-                FindObjectOfType<lighthackonandoff>().lighthack.SetActive(true);
+                FindObjectOfType<finalhackonandoff>().display.SetActive(true);
+                FindObjectOfType<finalhackonandoff>().keyboad.SetActive(true);
+                FindObjectOfType<finalhackonandoff>().Terminal.SetActive(true);
                 maphack.SetActive(false);
                 FindObjectOfType<PlayerGuidance>().guidance4.SetActive(false);
                 interaction.SetActive(false);
                 if (guidance4Check == true)
                 {
-                    FindObjectOfType<PlayerGuidance>().guidance3part2.SetActive(true);
+                    FindObjectOfType<PlayerGuidance>().guidance4part2.SetActive(true);
                 }
             }
         }

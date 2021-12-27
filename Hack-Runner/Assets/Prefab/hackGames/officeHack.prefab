@@ -193,7 +193,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1404923856698552}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -8.04, z: 0}
+  m_LocalPosition: {x: 0, y: -8.039993, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4027389112089032}
@@ -323,8 +323,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4027389112089032}
+  - component: {fileID: 5025739670620965991}
+  - component: {fileID: 114054090302723164}
   m_Layer: 0
-  m_Name: WM2000
+  m_Name: officeHack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -347,6 +349,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5025739670620965991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744407292189834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c85afb8d7f3a5d47bbd7032ecca5caf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  display: {fileID: 1865490045461082}
+  keyboad: {fileID: 1404923856698552}
+  Terminal: {fileID: 1925257292589310}
+--- !u!114 &114054090302723164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744407292189834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 395fee9b5ae89524ab32f309f58fe040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1783196620332798
 GameObject:
   m_ObjectHideFlags: 0

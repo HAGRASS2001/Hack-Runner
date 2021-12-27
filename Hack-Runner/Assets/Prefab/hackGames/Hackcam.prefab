@@ -220,23 +220,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Hit Play or Ctrl+P to turn me on.
-
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat
-    porta nunc porta laoreet. Nam tempor orci consequat ipsum volutpat, non tristique
-    neque viverra. Aenean sit amet sagittis lacus. Proin eu semper mi, ut tincidunt
-    dolor. Integer tortor felis, mollis vitae quam in, efficitur porta enim. Proin
-    sit amet commodo augue, accumsan mollis mi. Duis aliquam in diam sed tincidunt.
-    Aliquam ultrices eget ipsum at efficitur. Integer orci est, condimentum nec facilisis
-    ac, rutrum eu ex. Nullam sodales leo id bibendum dictum. Lorem ipsum dolor sit
-    amet, consectetur adipiscing elit. Pellentesque consequat porta nunc porta laoreet.
-    Nam tempor orci consequat ipsum volutpat, non tristique neque viverra. Aenean
-    sit amet sagittis lacus. Proin eu semper mi, ut tincidunt dolor. Integer tortor
-    felis, mollis vitae quam in, efficitur porta enim. Proin sit amet commodo augue,
-    accumsan mollis mi. Duis aliquam in diam sed tincidunt. Aliquam ultrices eget
-    ipsum at efficitur. Integer orci est, condimentum nec facilisis ac, rutrum eu
-    ex. Nullam sodales leo id bibendum dictum.'
+  m_Text: 
 --- !u!1 &4723182631435330962
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,7 +251,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5402611472503651062}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &6335463061829139084
 AudioSource:
@@ -412,8 +396,8 @@ Transform:
   m_LocalPosition: {x: 529.56934, y: 197.3453, z: -36.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6134369514465117674}
   - {fileID: 4811573374516999664}
+  - {fileID: 6134369514465117674}
   - {fileID: 1789086263738489238}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -603,7 +587,7 @@ RectTransform:
   - {fileID: 3647840755113215268}
   - {fileID: 4618752911074794678}
   m_Father: {fileID: 5402611472503651062}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
