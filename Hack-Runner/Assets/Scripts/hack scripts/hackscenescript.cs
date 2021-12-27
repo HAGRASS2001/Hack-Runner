@@ -96,6 +96,7 @@ public class hackscenescript : MonoBehaviour
                 FindObjectOfType<SwipeTask>().check.SetActive(true);
                 //FindObjectOfType<keyunlock>().x.SetActive(true);
                 cardhack.SetActive(false);
+                interaction.SetActive(false);
                 SceneInteracftion.SetActive(false);
                 FindObjectOfType<PlayerGuidance>().guidance2.SetActive(false);
                 if (guidance2Check == true)
