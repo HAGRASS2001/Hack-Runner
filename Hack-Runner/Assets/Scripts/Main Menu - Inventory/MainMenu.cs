@@ -10,8 +10,9 @@ public class MainMenu : MonoBehaviour
     public GameObject Menu;
     public void PlayGame()
     {
-        SceneManager.LoadScene("Inventory");
+        SceneManager.LoadScene("CutScene 1");
     }
+
     public void QuitGame()
     {
         ExitWindow.SetActive(true);
