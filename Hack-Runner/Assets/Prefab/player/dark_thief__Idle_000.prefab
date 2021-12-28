@@ -41,7 +41,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -3.2254567, y: -1.6967727}
@@ -128,7 +128,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -3.2254567, y: -1.6967727}
@@ -361,14 +361,18 @@ MonoBehaviour:
   e: 101
   w: 119
   triggerKey: 0
+  triggerKey2: 0
   triggerCard: 0
   triggerlight: 0
+  triggerMap: 0
   hackcheck: {fileID: 0}
   cardhack: {fileID: 0}
   lighthack: {fileID: 0}
+  maphack: {fileID: 0}
   player: {fileID: 2481417050169552911}
   interaction: {fileID: 0}
+  SceneInteracftion: {fileID: 0}
   interactionCheck: 0
-  scene2: 0
-  scene2LVL2: 0
   dontdestroy: {fileID: 0}
+  dontdestroy2: {fileID: 0}
+  dontdestroy3: {fileID: 0}
