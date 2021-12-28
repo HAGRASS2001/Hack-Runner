@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 4026286437062555565}
   - component: {fileID: 4026286437062555561}
   m_Layer: 10
-  m_Name: aged_thief__Idle_000
-  m_TagString: Untagged
+  m_Name: jordan
+  m_TagString: jordan
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class bossenemy : enemyController
 {
+    public int bosshealth = 10;
+    public int lives = 2;
     private Animator anim;
     private float flickertime = 0f;
     public float flickerduration = 0.1f;
@@ -21,6 +23,8 @@ public class bossenemy : enemyController
     public GameObject healthicon8;
     public GameObject healthicon9;
     public GameObject healthicon10;
+    public GameObject liveicon1;
+    public GameObject liveicon2;
     // Start is called before the first frame update
     void Start()
     {
@@ -66,55 +70,118 @@ public class bossenemy : enemyController
     {
         if (this.isimmune == false)
         {
-            if (bosshealth == 10)
+            if (lives == 2)
             {
-                bosshealth--;
-                Destroy(healthicon10);
+                if (bosshealth == 10)
+                {
+                    bosshealth--;
+                    Destroy(healthicon10);
+                }
+                else if (bosshealth == 9)
+                {
+                    bosshealth--;
+                    Destroy(healthicon9);
+                }
+                else if (bosshealth == 8)
+                {
+                    bosshealth--;
+                    Destroy(healthicon8);
+                }
+                else if (bosshealth == 7)
+                {
+                    bosshealth--;
+                    Destroy(healthicon7);
+                }
+                else if (bosshealth == 6)
+                {
+                    bosshealth--;
+                    Destroy(healthicon6);
+                }
+                else if (bosshealth == 5)
+                {
+                    bosshealth--;
+                    Destroy(healthicon5);
+                }
+                else if (bosshealth == 4)
+                {
+                    bosshealth--;
+                    Destroy(healthicon4);
+                }
+                else if (bosshealth == 3)
+                {
+                    bosshealth--;
+                    Destroy(healthicon3);
+                }
+                else if (bosshealth == 2)
+                {
+                    bosshealth--;
+                    Destroy(healthicon2);
+                }
+                else if (bosshealth == 1)
+                {
+                    bosshealth--;
+                    lives--;
+                    Destroy(healthicon1);
+                    Destroy(liveicon1);
+                    bosshealth = 10;
+                }
             }
-            else if (bosshealth == 9)
+            else if (lives == 1)
             {
-                bosshealth--;
-                Destroy(healthicon9);
+                if (bosshealth == 10)
+                {
+                    bosshealth--;
+                    Destroy(healthicon10);
+                }
+                else if (bosshealth == 9)
+                {
+                    bosshealth--;
+                    Destroy(healthicon9);
+                }
+                else if (bosshealth == 8)
+                {
+                    bosshealth--;
+                    Destroy(healthicon8);
+                }
+                else if (bosshealth == 7)
+                {
+                    bosshealth--;
+                    Destroy(healthicon7);
+                }
+                else if (bosshealth == 6)
+                {
+                    bosshealth--;
+                    Destroy(healthicon6);
+                }
+                else if (bosshealth == 5)
+                {
+                    bosshealth--;
+                    Destroy(healthicon5);
+                }
+                else if (bosshealth == 4)
+                {
+                    bosshealth--;
+                    Destroy(healthicon4);
+                }
+                else if (bosshealth == 3)
+                {
+                    bosshealth--;
+                    Destroy(healthicon3);
+                }
+                else if (bosshealth == 2)
+                {
+                    bosshealth--;
+                    Destroy(healthicon2);
+                }
+                else if (bosshealth == 1)
+                {
+                    bosshealth--;
+                    lives--;
+                    Destroy(healthicon1);
+                    Destroy(liveicon2);
+                }
             }
-            else if (bosshealth == 8)
-            {
-                bosshealth--;
-                Destroy(healthicon8);
-            }
-            else if (bosshealth == 7)
-            {
-                bosshealth--;
-                Destroy(healthicon7);
-            }
-            else if (bosshealth == 6)
-            {
-                bosshealth--;
-                Destroy(healthicon6);
-            }
-            else if (bosshealth == 5)
-            {
-                bosshealth--;
-                Destroy(healthicon5);
-            }
-            else if (bosshealth == 4)
-            {
-                bosshealth--;
-                Destroy(healthicon4);
-            }
-            else if (bosshealth == 3)
-            {
-                bosshealth--;
-                Destroy(healthicon3);
-            }
-            else if (bosshealth == 2)
-            {
-                bosshealth--;
-                Destroy(healthicon2);
-            }
-            else if (bosshealth == 1)
-            {
-                bosshealth--;
-                Destroy(healthicon1);
+            else if(lives == 0) {
                 Destroy(this.gameObject);
             }
         }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FinalHack : MonoBehaviour
 {
@@ -103,32 +104,32 @@ public class FinalHack : MonoBehaviour
     {
         if (input == "download")
         {
-            Application.Quit();//or go to level 4 
-            //Application.LoadLevel(5);
-
+            Terminal.WriteLine("Success!!!");
+            Invoke("done", 2);
         }
         else
         {
             Terminal.WriteLine("Enter download to download this file");
         }
     }
+    void done()
+    {
+        FindObjectOfType<finalhackonandoff>().display.SetActive(false);
+        FindObjectOfType<finalhackonandoff>().keyboad.SetActive(false);
+        FindObjectOfType<finalhackonandoff>().Terminal.SetActive(false);
+        SceneManager.LoadScene(14);
+    }
 
-    
-
-
-
-   
     void AskForPassword() {//Function that calls for the screen //The user will
         currentScreen=Screen.Password;
         Terminal.ClearScreen();
-        Terminal.WriteLine("Hint:password is marca");
         Terminal.WriteLine("Enter your Password : ");
         SetPassword();
        
     }
     void SetPassword()
     {
-        password = "marca";
+        password = "moco2000";
     }
 
     void checkpassword(string input)

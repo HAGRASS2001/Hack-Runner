@@ -18,7 +18,6 @@ public class hackscenescript : MonoBehaviour
     public GameObject lighthack;
     public GameObject maphack;
     public GameObject hackoffice;
-
     public Rigidbody2D player;
     public GameObject interaction;
     public GameObject SceneInteracftion;
@@ -33,6 +32,7 @@ public class hackscenescript : MonoBehaviour
     private bool gotolvl2scene1;
     private bool gotolvl2scene2;
     private bool gotolvl3scene1;
+    private bool gotolvl3scene2;
     public Canvas dontdestroy;
     public GameObject dontdestroy2;
     public GameObject dontdestroy3;
@@ -41,9 +41,9 @@ public class hackscenescript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = FindObjectOfType<playercontroller>().gameObject.GetComponent<Rigidbody2D>();
         interactionCheck = false;
         SceneInteracftion.SetActive(false);
-        player = FindObjectOfType<playercontroller>().gameObject.GetComponent<Rigidbody2D>();
         interaction.SetActive(false);
     }
 
@@ -95,6 +95,16 @@ public class hackscenescript : MonoBehaviour
                 SceneInteracftion.SetActive(false);
                 Destroy(dontdestroyaudio);
                 SceneManager.LoadScene(11);
+            }
+            if (gotolvl3scene2 == true)
+            {
+                DontDestroyOnLoad(FindObjectOfType<playercontroller>().gameObject);
+                DontDestroyOnLoad(dontdestroy);
+                DontDestroyOnLoad(dontdestroy2);
+                DontDestroyOnLoad(dontdestroy3);
+                SceneInteracftion.SetActive(false);
+                Destroy(dontdestroyaudio);
+                SceneManager.LoadScene(13);
             }
         }
         if (Input.GetKey(e))
@@ -201,6 +211,11 @@ public class hackscenescript : MonoBehaviour
             gotolvl3scene1 = true;
             SceneInteracftion.SetActive(true);
         }
+        if (other.tag == "gotolvl3scene2")
+        {
+            gotolvl3scene2 = true;
+            SceneInteracftion.SetActive(true);
+        }
         if (other.tag == "hack")
         {
             hackcheck = other.gameObject;
@@ -237,6 +252,7 @@ public class hackscenescript : MonoBehaviour
         {
             hackoffice = other.gameObject;
             triggerofficemarca = true;
+            gotolvl3scene2 = false;
             interaction.SetActive(true);
             //FindObjectOfType<PlayerGuidance>().guidance4.SetActive(true);
            // guidance4Check = true;
