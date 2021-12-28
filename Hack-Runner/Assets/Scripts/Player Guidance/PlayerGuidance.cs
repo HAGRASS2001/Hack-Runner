@@ -11,6 +11,7 @@ public class PlayerGuidance : MonoBehaviour
     public GameObject guidance2part2;
     public GameObject guidance3;
     public GameObject guidance3part2;
+    public GameObject guidance3part3;
     public GameObject guidance4;
     public GameObject guidance4part2;
     // Start is called before the first frame update
@@ -23,6 +24,7 @@ public class PlayerGuidance : MonoBehaviour
         guidance1Part2.SetActive(false);
         guidance2part2.SetActive(false);
         guidance3part2.SetActive(false);
+        guidance3part3.SetActive(false);
         guidance4part2.SetActive(false);
 
     }
