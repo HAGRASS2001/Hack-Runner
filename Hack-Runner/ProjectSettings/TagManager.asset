@@ -29,6 +29,8 @@ TagManager:
   - FlashBack
   - gotolvl3scene2
   - jordan
+  - flip
+  - returnflip
   layers:
   - Default
   - TransparentFX
