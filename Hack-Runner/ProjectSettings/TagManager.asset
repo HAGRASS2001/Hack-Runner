@@ -22,6 +22,8 @@ TagManager:
   - location
   - gotolvl2scene2
   - hack map
+  - robotfreeze
+  - robotend
   layers:
   - Default
   - TransparentFX

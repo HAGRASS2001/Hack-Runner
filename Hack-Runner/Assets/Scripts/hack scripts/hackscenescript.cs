@@ -29,10 +29,10 @@ public class hackscenescript : MonoBehaviour
     private bool gotolvl1scene3;
     private bool gotolvl2scene1;
     private bool gotolvl2scene2;
+    private bool gotolvl3scene1;
     public Canvas dontdestroy;
     public GameObject dontdestroy2;
     public GameObject dontdestroy3;
-    private GameObject location;
     // Start is called before the first frame update
     void Start()
     {
@@ -55,10 +55,6 @@ public class hackscenescript : MonoBehaviour
                 DontDestroyOnLoad(dontdestroy3);
                 Application.LoadLevel(5);
             }
-            if (scene2LVL2 == true)
-            {
-                Application.LoadLevel(7);
-            }
             if (gotolvl1scene3 == true)
             {
                 DontDestroyOnLoad(FindObjectOfType<playercontroller>().gameObject);
@@ -79,12 +75,21 @@ public class hackscenescript : MonoBehaviour
             }
             if (gotolvl2scene2 == true)
             {
-                //DontDestroyOnLoad(FindObjectOfType<playercontroller>().gameObject);
+                DontDestroyOnLoad(FindObjectOfType<playercontroller>().gameObject);
                 SceneInteracftion.SetActive(false);
-                //DontDestroyOnLoad(dontdestroy);
-                //DontDestroyOnLoad(dontdestroy2);
-                //DontDestroyOnLoad(dontdestroy3);
+                DontDestroyOnLoad(dontdestroy);
+                DontDestroyOnLoad(dontdestroy2);
+                DontDestroyOnLoad(dontdestroy3);
                 SceneManager.LoadScene(7);
+            }
+            if (gotolvl3scene1 == true)
+            {
+                DontDestroyOnLoad(FindObjectOfType<playercontroller>().gameObject);
+                SceneInteracftion.SetActive(false);
+                DontDestroyOnLoad(dontdestroy);
+                DontDestroyOnLoad(dontdestroy2);
+                DontDestroyOnLoad(dontdestroy3);
+                SceneManager.LoadScene(10);
             }
         }
         if (Input.GetKey(e))
@@ -170,6 +175,11 @@ public class hackscenescript : MonoBehaviour
         if (other.tag == "gotolvl2scene2")
         {
             gotolvl2scene2 = true;
+            SceneInteracftion.SetActive(true);
+        }
+        if (other.tag == "gotolvl3scene1")
+        {
+            gotolvl3scene1 = true;
             SceneInteracftion.SetActive(true);
         }
         if (other.tag == "hack")
