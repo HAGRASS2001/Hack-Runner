@@ -532,12 +532,12 @@ PrefabInstance:
     - target: {fileID: 8978747932960788439, guid: e63608496c8fc90459e53486143b09c9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -43.8
+      value: -43.53
       objectReference: {fileID: 0}
     - target: {fileID: 8978747932960788439, guid: e63608496c8fc90459e53486143b09c9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.7
+      value: 2.43
       objectReference: {fileID: 0}
     - target: {fileID: 8978747932960788439, guid: e63608496c8fc90459e53486143b09c9,
         type: 3}
@@ -641,5 +641,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5025739670620965991, guid: c46548f7b668a78409fa399c095e4e6b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c46548f7b668a78409fa399c095e4e6b, type: 3}
+--- !u!1 &1956095278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1744407292189834, guid: c46548f7b668a78409fa399c095e4e6b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1956095277}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1956095279 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1925257292589310, guid: c46548f7b668a78409fa399c095e4e6b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1956095277}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1956095280 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1404923856698552, guid: c46548f7b668a78409fa399c095e4e6b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1956095277}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1956095281 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1865490045461082, guid: c46548f7b668a78409fa399c095e4e6b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1956095277}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1956095282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956095278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0eaaf06f44bc054389cdc87a310fda3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  display: {fileID: 1956095281}
+  keyboad: {fileID: 1956095280}
+  Terminal: {fileID: 1956095279}
