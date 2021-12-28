@@ -97,7 +97,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.2028036, y: 0}
+  m_Offset: {x: -1.3628476, y: -0.8702626}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -108,7 +108,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.794394, y: 11.6}
+  m_Size: {x: 3.6630902, y: 8.118952}
   m_EdgeRadius: 0
 --- !u!61 &4026286437062555563
 BoxCollider2D:
@@ -123,7 +123,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.120194, y: 0}
+  m_Offset: {x: 0.14731425, y: -0.8673277}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -134,7 +134,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.959613, y: 11.6}
+  m_Size: {x: 0.75689375, y: 8.171039}
   m_EdgeRadius: 0
 --- !u!50 &4026286437062555562
 Rigidbody2D:
@@ -173,6 +173,9 @@ MonoBehaviour:
   maxspeed: 3
   damage: 1
   bosshealth: 10
+  flickerduration: 0.1
+  isimmune: 0
+  immunityduration: 1.5
   healthicon1: {fileID: 0}
   healthicon2: {fileID: 0}
   healthicon3: {fileID: 0}
