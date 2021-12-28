@@ -25,6 +25,12 @@ TagManager:
   - robotfreeze
   - robotend
   - hackoffice
+  - AudioLVL2
+  - FlashBack
+  - gotolvl3scene2
+  - jordan
+  - flip
+  - returnflip
   layers:
   - Default
   - TransparentFX

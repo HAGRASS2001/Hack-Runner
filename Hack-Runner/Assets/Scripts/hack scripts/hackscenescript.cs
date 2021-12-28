@@ -18,7 +18,6 @@ public class hackscenescript : MonoBehaviour
     public GameObject lighthack;
     public GameObject maphack;
     public GameObject hackoffice;
-
     public Rigidbody2D player;
     public GameObject interaction;
     public GameObject SceneInteracftion;
@@ -33,15 +32,18 @@ public class hackscenescript : MonoBehaviour
     private bool gotolvl2scene1;
     private bool gotolvl2scene2;
     private bool gotolvl3scene1;
+    private bool gotolvl3scene2;
     public Canvas dontdestroy;
     public GameObject dontdestroy2;
     public GameObject dontdestroy3;
+    public GameObject dontdestroyaudio;
+    public GameObject audiolvl2;
     // Start is called before the first frame update
     void Start()
     {
+        player = FindObjectOfType<playercontroller>().gameObject.GetComponent<Rigidbody2D>();
         interactionCheck = false;
         SceneInteracftion.SetActive(false);
-        player = FindObjectOfType<playercontroller>().gameObject.GetComponent<Rigidbody2D>();
         interaction.SetActive(false);
     }
 
@@ -54,6 +56,7 @@ public class hackscenescript : MonoBehaviour
             {
                 DontDestroyOnLoad(FindObjectOfType<playercontroller>().gameObject);
                 SceneInteracftion.SetActive(false);
+                DontDestroyOnLoad(dontdestroyaudio);
                 DontDestroyOnLoad(dontdestroy);
                 DontDestroyOnLoad(dontdestroy2);
                 DontDestroyOnLoad(dontdestroy3);
@@ -63,6 +66,7 @@ public class hackscenescript : MonoBehaviour
             {
                 DontDestroyOnLoad(FindObjectOfType<playercontroller>().gameObject);
                 SceneInteracftion.SetActive(false);
+                DontDestroyOnLoad(dontdestroyaudio);
                 DontDestroyOnLoad(dontdestroy);
                 DontDestroyOnLoad(dontdestroy2);
                 DontDestroyOnLoad(dontdestroy3);
@@ -70,30 +74,37 @@ public class hackscenescript : MonoBehaviour
             }
             if (gotolvl2scene1 == true)
             {
-                DontDestroyOnLoad(FindObjectOfType<playercontroller>().gameObject);
+                Destroy(FindObjectOfType<playercontroller>().gameObject);
                 SceneInteracftion.SetActive(false);
-                DontDestroyOnLoad(dontdestroy);
-                DontDestroyOnLoad(dontdestroy2);
-                DontDestroyOnLoad(dontdestroy3);
-                Application.LoadLevel(6);
+                Destroy(dontdestroyaudio);
+                SceneManager.LoadScene("CutScene 2");
             }
             if (gotolvl2scene2 == true)
             {
                 DontDestroyOnLoad(FindObjectOfType<playercontroller>().gameObject);
-                SceneInteracftion.SetActive(false);
                 DontDestroyOnLoad(dontdestroy);
                 DontDestroyOnLoad(dontdestroy2);
                 DontDestroyOnLoad(dontdestroy3);
+                DontDestroyOnLoad(dontdestroyaudio);
+                SceneInteracftion.SetActive(false);
                 SceneManager.LoadScene(7);
             }
             if (gotolvl3scene1 == true)
             {
-                DontDestroyOnLoad(FindObjectOfType<playercontroller>().gameObject);
+                Destroy(FindObjectOfType<playercontroller>().gameObject);
                 SceneInteracftion.SetActive(false);
+                Destroy(dontdestroyaudio);
+                SceneManager.LoadScene(11);
+            }
+            if (gotolvl3scene2 == true)
+            {
+                DontDestroyOnLoad(FindObjectOfType<playercontroller>().gameObject);
                 DontDestroyOnLoad(dontdestroy);
                 DontDestroyOnLoad(dontdestroy2);
                 DontDestroyOnLoad(dontdestroy3);
-                SceneManager.LoadScene(10);
+                SceneInteracftion.SetActive(false);
+                Destroy(dontdestroyaudio);
+                SceneManager.LoadScene(13);
             }
         }
         if (Input.GetKey(e))
@@ -200,6 +211,11 @@ public class hackscenescript : MonoBehaviour
             gotolvl3scene1 = true;
             SceneInteracftion.SetActive(true);
         }
+        if (other.tag == "gotolvl3scene2")
+        {
+            gotolvl3scene2 = true;
+            SceneInteracftion.SetActive(true);
+        }
         if (other.tag == "hack")
         {
             hackcheck = other.gameObject;
@@ -236,6 +252,7 @@ public class hackscenescript : MonoBehaviour
         {
             hackoffice = other.gameObject;
             triggerofficemarca = true;
+            gotolvl3scene2 = false;
             interaction.SetActive(true);
             //FindObjectOfType<PlayerGuidance>().guidance4.SetActive(true);
            // guidance4Check = true;
@@ -253,6 +270,22 @@ public class hackscenescript : MonoBehaviour
             FindObjectOfType<PlayerGuidance>().guidance3.SetActive(false);
             FindObjectOfType<PlayerGuidance>().guidance2part2.SetActive(false);
         }
+        if(other.tag == "AudioLVL2")
+        {
+            audiolvl2 = other.gameObject;
+        }
+        if(other.tag == "FlashBack")
+        {
+            player.constraints = RigidbodyConstraints2D.FreezeAll;
+            FindObjectOfType<FlashBack>().flashbackvid.SetActive(true);
+            Invoke("TurnFlashBackOff", 5);
+        }
+    }
+    public void TurnFlashBackOff()
+    {
+        FindObjectOfType<FlashBack>().flashbackvid.SetActive(false);
+        player.constraints = RigidbodyConstraints2D.None;
+        player.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
     //IEnumerator Loadyourasynchack() {
