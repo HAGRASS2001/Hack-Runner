@@ -6,6 +6,7 @@ public class enemyController : MonoBehaviour {
 	public bool isfacingright = false;
 	public float maxspeed = 3f;
 	public int damage = 1;
+	public int bosshealth = 10;
 
 	public void flip()
 	{
