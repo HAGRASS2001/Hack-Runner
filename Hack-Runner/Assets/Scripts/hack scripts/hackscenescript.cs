@@ -76,11 +76,12 @@ public class hackscenescript : MonoBehaviour
             {
                 DontDestroyOnLoad(FindObjectOfType<playercontroller>().gameObject);
                 SceneInteracftion.SetActive(false);
+                FindObjectOfType<CutScenes2>().run = true;
                 DontDestroyOnLoad(dontdestroy);
                 DontDestroyOnLoad(dontdestroy2);
                 DontDestroyOnLoad(dontdestroy3);
                 Destroy(dontdestroyaudio);
-                SceneManager.LoadScene("CutScene 2");
+                SceneManager.LoadScene(6);
             }
             if (gotolvl2scene2 == true)
             {

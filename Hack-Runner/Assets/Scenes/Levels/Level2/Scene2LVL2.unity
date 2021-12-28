@@ -875,7 +875,7 @@ MonoBehaviour:
   target: {fileID: 0}
   cameraspeed: 5
   minX: 0
-  maxX: 100
+  maxX: 500
   minY: 0
   maxY: 0
 --- !u!1001 &1270004575
