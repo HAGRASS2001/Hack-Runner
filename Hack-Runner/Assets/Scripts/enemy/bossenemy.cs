@@ -13,6 +13,7 @@ public class bossenemy : enemyController
     public bool isimmune = false;
     private float immunitytime = 0f;
     public float immunityduration = 1.5f;
+    private GameObject returnflip;
     public GameObject healthicon1;
     public GameObject healthicon2;
     public GameObject healthicon3;
@@ -53,6 +54,14 @@ public class bossenemy : enemyController
         if (other.tag == "wall")
         {
             flip();
+        }
+        if (other.tag == "flip") {
+            flip();
+            returnflip =  other.gameObject;
+            returnflip.SetActive(false);
+        }
+        if (other.tag == "returnflip") {
+            returnflip.SetActive(true);
         }
         if (other.tag == "Player")
         {
