@@ -74,32 +74,27 @@ public class hackscenescript : MonoBehaviour
             }
             if (gotolvl2scene1 == true)
             {
-                DontDestroyOnLoad(FindObjectOfType<playercontroller>().gameObject);
+                Destroy(FindObjectOfType<playercontroller>().gameObject);
                 SceneInteracftion.SetActive(false);
-                FindObjectOfType<CutScenes2>().run = true;
-                DontDestroyOnLoad(dontdestroy);
-                DontDestroyOnLoad(dontdestroy2);
-                DontDestroyOnLoad(dontdestroy3);
                 Destroy(dontdestroyaudio);
-                SceneManager.LoadScene(6);
+                SceneManager.LoadScene("CutScene 2");
             }
             if (gotolvl2scene2 == true)
             {
                 DontDestroyOnLoad(FindObjectOfType<playercontroller>().gameObject);
-                SceneInteracftion.SetActive(false);
                 DontDestroyOnLoad(dontdestroy);
                 DontDestroyOnLoad(dontdestroy2);
                 DontDestroyOnLoad(dontdestroy3);
+                DontDestroyOnLoad(dontdestroyaudio);
+                SceneInteracftion.SetActive(false);
                 SceneManager.LoadScene(7);
             }
             if (gotolvl3scene1 == true)
             {
-                DontDestroyOnLoad(FindObjectOfType<playercontroller>().gameObject);
+                Destroy(FindObjectOfType<playercontroller>().gameObject);
                 SceneInteracftion.SetActive(false);
-                DontDestroyOnLoad(dontdestroy);
-                DontDestroyOnLoad(dontdestroy2);
-                DontDestroyOnLoad(dontdestroy3);
-                SceneManager.LoadScene(10);
+                Destroy(dontdestroyaudio);
+                SceneManager.LoadScene(11);
             }
         }
         if (Input.GetKey(e))
@@ -263,6 +258,18 @@ public class hackscenescript : MonoBehaviour
         {
             audiolvl2 = other.gameObject;
         }
+        if(other.tag == "FlashBack")
+        {
+            player.constraints = RigidbodyConstraints2D.FreezeAll;
+            FindObjectOfType<FlashBack>().flashbackvid.SetActive(true);
+            Invoke("TurnFlashBackOff", 5);
+        }
+    }
+    public void TurnFlashBackOff()
+    {
+        FindObjectOfType<FlashBack>().flashbackvid.SetActive(false);
+        player.constraints = RigidbodyConstraints2D.None;
+        player.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
     //IEnumerator Loadyourasynchack() {
