@@ -12,10 +12,13 @@ public class hackscenescript : MonoBehaviour
     public bool triggerCard = false;
     public bool triggerlight = false;
     public bool triggerMap = false;
+    public bool triggerofficemarca = false;
     public GameObject hackcheck;
     public GameObject cardhack;
     public GameObject lighthack;
     public GameObject maphack;
+    public GameObject hackoffice;
+
     public Rigidbody2D player;
     public GameObject interaction;
     public GameObject SceneInteracftion;
@@ -45,7 +48,8 @@ public class hackscenescript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(w)) {
+        if (Input.GetKey(w))
+        {
             if (scene2 == true)
             {
                 DontDestroyOnLoad(FindObjectOfType<playercontroller>().gameObject);
@@ -129,7 +133,7 @@ public class hackscenescript : MonoBehaviour
                 lighthack.SetActive(false);
                 FindObjectOfType<PlayerGuidance>().guidance3.SetActive(false);
                 interaction.SetActive(false);
-                if(guidance3Check == true)
+                if (guidance3Check == true)
                 {
                     FindObjectOfType<PlayerGuidance>().guidance3part2.SetActive(true);
                 }
@@ -148,9 +152,23 @@ public class hackscenescript : MonoBehaviour
                     FindObjectOfType<PlayerGuidance>().guidance4part2.SetActive(true);
                 }
             }
+            if (triggerofficemarca == true)
+            {
+                player.constraints = RigidbodyConstraints2D.FreezeAll;
+                FindObjectOfType<marcaofficehackonandoff>().display.SetActive(true);
+                FindObjectOfType<marcaofficehackonandoff>().keyboad.SetActive(true);
+                FindObjectOfType<marcaofficehackonandoff>().Terminal.SetActive(true);
+                hackoffice.SetActive(false);
+                // FindObjectOfType<PlayerGuidance>().guidance4.SetActive(false);
+                interaction.SetActive(false);
+                //if (guidance4Check == true)
+                //{
+                //    FindObjectOfType<PlayerGuidance>().guidance4part2.SetActive(true);
+                //}
+            }
+
         }
     }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "gotoscene2")
@@ -214,11 +232,20 @@ public class hackscenescript : MonoBehaviour
             FindObjectOfType<PlayerGuidance>().guidance4.SetActive(true);
             guidance4Check = true;
         }
+        if (other.tag == "hackoffice")
+        {
+            hackoffice = other.gameObject;
+            triggerofficemarca = true;
+            interaction.SetActive(true);
+            //FindObjectOfType<PlayerGuidance>().guidance4.SetActive(true);
+           // guidance4Check = true;
+        }
         if (other.tag == "end") {
             triggerKey = false;
             triggerCard = false;
             triggerlight = false;
             triggerMap = false;
+            triggerofficemarca = false;
             interaction.SetActive(false);
             SceneInteracftion.SetActive(false);
             FindObjectOfType<PlayerGuidance>().guidance1.SetActive(false);

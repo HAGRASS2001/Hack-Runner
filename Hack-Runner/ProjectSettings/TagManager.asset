@@ -24,6 +24,7 @@ TagManager:
   - hack map
   - robotfreeze
   - robotend
+  - hackoffice
   layers:
   - Default
   - TransparentFX

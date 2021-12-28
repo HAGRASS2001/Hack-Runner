@@ -193,9 +193,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movespeed: 5
-  isfacingright: 0
+  isfacingright: 1
   attack2: 113
-  minDistance: 0
+  minDistance: 4
   firepoint: {fileID: 1546367398391352286}
-  bullet: {fileID: 0}
+  bullet: {fileID: 3855460508507896030, guid: e3e7d2aa888fb8b429e58c1d7a27e169, type: 3}
   Return: 114
