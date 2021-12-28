@@ -41,6 +41,7 @@ public class bossenemy : enemyController
                 this.spriterenderer.enabled = true;
             }
         }
+        anim.SetFloat("speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -51,7 +52,9 @@ public class bossenemy : enemyController
         }
         if (other.tag == "Player")
         {
+            flip();
             attack();
+            Invoke("flip", 3);
             FindObjectOfType<playerstats>().takedamage(damage);
         }
         if (other.gameObject.tag == "playerkick")
