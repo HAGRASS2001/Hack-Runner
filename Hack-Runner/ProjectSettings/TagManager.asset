@@ -25,6 +25,7 @@ TagManager:
   - robotfreeze
   - robotend
   - hackoffice
+  - AudioLVL2
   layers:
   - Default
   - TransparentFX

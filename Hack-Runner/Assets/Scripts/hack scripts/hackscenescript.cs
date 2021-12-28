@@ -36,6 +36,8 @@ public class hackscenescript : MonoBehaviour
     public Canvas dontdestroy;
     public GameObject dontdestroy2;
     public GameObject dontdestroy3;
+    public GameObject dontdestroyaudio;
+    public GameObject audiolvl2;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +56,7 @@ public class hackscenescript : MonoBehaviour
             {
                 DontDestroyOnLoad(FindObjectOfType<playercontroller>().gameObject);
                 SceneInteracftion.SetActive(false);
+                DontDestroyOnLoad(dontdestroyaudio);
                 DontDestroyOnLoad(dontdestroy);
                 DontDestroyOnLoad(dontdestroy2);
                 DontDestroyOnLoad(dontdestroy3);
@@ -63,6 +66,7 @@ public class hackscenescript : MonoBehaviour
             {
                 DontDestroyOnLoad(FindObjectOfType<playercontroller>().gameObject);
                 SceneInteracftion.SetActive(false);
+                DontDestroyOnLoad(dontdestroyaudio);
                 DontDestroyOnLoad(dontdestroy);
                 DontDestroyOnLoad(dontdestroy2);
                 DontDestroyOnLoad(dontdestroy3);
@@ -75,7 +79,8 @@ public class hackscenescript : MonoBehaviour
                 DontDestroyOnLoad(dontdestroy);
                 DontDestroyOnLoad(dontdestroy2);
                 DontDestroyOnLoad(dontdestroy3);
-                Application.LoadLevel(6);
+                Destroy(dontdestroyaudio);
+                SceneManager.LoadScene("CutScene 2");
             }
             if (gotolvl2scene2 == true)
             {
@@ -252,6 +257,10 @@ public class hackscenescript : MonoBehaviour
             FindObjectOfType<PlayerGuidance>().guidance2.SetActive(false);
             FindObjectOfType<PlayerGuidance>().guidance3.SetActive(false);
             FindObjectOfType<PlayerGuidance>().guidance2part2.SetActive(false);
+        }
+        if(other.tag == "AudioLVL2")
+        {
+            audiolvl2 = other.gameObject;
         }
     }
 
