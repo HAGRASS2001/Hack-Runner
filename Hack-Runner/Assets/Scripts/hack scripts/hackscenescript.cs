@@ -155,9 +155,9 @@ public class hackscenescript : MonoBehaviour
             if (triggerofficemarca == true)
             {
                 player.constraints = RigidbodyConstraints2D.FreezeAll;
-                FindObjectOfType<marcaofficehackonandoff>().display.SetActive(true);
-                FindObjectOfType<marcaofficehackonandoff>().keyboad.SetActive(true);
-                FindObjectOfType<marcaofficehackonandoff>().Terminal.SetActive(true);
+                FindObjectOfType<finalhackonandoff>().display.SetActive(true);
+                FindObjectOfType<finalhackonandoff>().keyboad.SetActive(true);
+                FindObjectOfType<finalhackonandoff>().Terminal.SetActive(true);
                 hackoffice.SetActive(false);
                 // FindObjectOfType<PlayerGuidance>().guidance4.SetActive(false);
                 interaction.SetActive(false);
