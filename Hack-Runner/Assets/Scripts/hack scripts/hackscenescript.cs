@@ -95,6 +95,9 @@ public class hackscenescript : MonoBehaviour
             {
                 Destroy(FindObjectOfType<playercontroller>().gameObject);
                 SceneInteracftion.SetActive(false);
+                Destroy(FindObjectOfType<playercontroller>().gameObject.GetComponent<hackscenescript>().dontdestroy.gameObject);
+                Destroy(dontdestroy2);
+                Destroy(dontdestroy3);
                 Destroy(dontdestroyaudio);
                 SceneManager.LoadScene(11);
             }
@@ -106,7 +109,7 @@ public class hackscenescript : MonoBehaviour
                 DontDestroyOnLoad(dontdestroy3);
                 DontDestroyOnLoad(audiolvl3);
                 SceneInteracftion.SetActive(false);
-                SceneManager.LoadScene(13);
+                SceneManager.LoadScene(14);
             }
         }
         if (Input.GetKey(e))
@@ -177,6 +180,7 @@ public class hackscenescript : MonoBehaviour
                 if(guidance5Check == true)
                 {
                     FindObjectOfType<PlayerGuidance>().guidance5part2.SetActive(true);
+                    FindObjectOfType<PlayerGuidance>().guidance5part3.SetActive(true);
                 }
             }
 

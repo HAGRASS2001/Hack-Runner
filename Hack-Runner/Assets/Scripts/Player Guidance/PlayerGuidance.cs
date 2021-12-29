@@ -16,6 +16,7 @@ public class PlayerGuidance : MonoBehaviour
     public GameObject guidance4part2;
     public GameObject guidance5;
     public GameObject guidance5part2;
+    public GameObject guidance5part3;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +31,7 @@ public class PlayerGuidance : MonoBehaviour
         guidance3part3.SetActive(false);
         guidance4part2.SetActive(false);
         guidance5part2.SetActive(false);
+        guidance5part3.SetActive(false);
 
     }
     public void ReturnInteraction()

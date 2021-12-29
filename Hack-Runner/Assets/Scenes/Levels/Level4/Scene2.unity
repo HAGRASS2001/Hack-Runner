@@ -998,9 +998,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3971d9beea4f9de47ad21d14f35a26ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  o1: {fileID: 1235648141}
+  o1: {fileID: 0}
   o2: {fileID: 805903880}
-  o3: {fileID: 569507007}
+  o3: {fileID: 0}
   o4: {fileID: 0}
   o5: {fileID: 0}
   o6: {fileID: 0}
@@ -1321,8 +1321,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   o1: {fileID: 1235648141}
-  o2: {fileID: 805903880}
-  o3: {fileID: 569507007}
+  o2: {fileID: 0}
+  o3: {fileID: 0}
   o4: {fileID: 0}
   o5: {fileID: 0}
   o6: {fileID: 0}
@@ -1944,8 +1944,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3971d9beea4f9de47ad21d14f35a26ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  o1: {fileID: 1235648141}
-  o2: {fileID: 805903880}
+  o1: {fileID: 0}
+  o2: {fileID: 0}
   o3: {fileID: 569507007}
   o4: {fileID: 0}
   o5: {fileID: 0}
@@ -2655,7 +2655,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 2134943476}
   cameraspeed: 4
-  minX: 0
+  minX: -100
   maxX: 1000
   minY: 0
   maxY: 0
