@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class bossenemy : enemyController
 {
@@ -192,6 +193,8 @@ public class bossenemy : enemyController
             }
             else if(lives == 0) {
                 Destroy(this.gameObject);
+                Destroy(FindObjectOfType<playercontroller>().gameObject.GetComponent<hackscenescript>().audiolvl3);
+                SceneManager.LoadScene(12);
             }
         }
         enemyhitreaction();

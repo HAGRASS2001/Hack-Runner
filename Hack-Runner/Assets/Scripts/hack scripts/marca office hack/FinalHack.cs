@@ -5,35 +5,35 @@ using UnityEngine.SceneManagement;
 
 public class FinalHack : MonoBehaviour
 {
-   
-    
+
+
     int option;
-    enum Screen { MainMenu, Password, MainMenu1 , quite }; //defines so that user can switch screen upon entering the game
+    enum Screen { MainMenu, Password, MainMenu1, quite }; //defines so that user can switch screen upon entering the game
     Screen currentScreen; //variable for the screen that will be equal to the current screen
     string password;
-    
+
     // Start is called before the first frame update
     void Start()
     {
         login();
     }
-        void ShowMainMenu() 
-        {
-            currentScreen = Screen.MainMenu1;
-             Terminal.ClearScreen();
-            Terminal.WriteLine("-------Welcome Mr.Marcano---------------");
-            Terminal.WriteLine("What would you like to open ?");
-            Terminal.WriteLine("Press 1 for go to Files");
-            Terminal.WriteLine("Press 2 for camRecord  ");
-            Terminal.WriteLine("Press 3 for a Social Media");
-            Terminal.WriteLine("Enter your selection:");
-       
-        }
+    void ShowMainMenu()
+    {
+        currentScreen = Screen.MainMenu1;
+        Terminal.ClearScreen();
+        Terminal.WriteLine("-------Welcome Mr.Marcano---------------");
+        Terminal.WriteLine("What would you like to open ?");
+        Terminal.WriteLine("Press 1 for go to Files");
+        Terminal.WriteLine("Press 2 for camRecord  ");
+        Terminal.WriteLine("Press 3 for a Social Media");
+        Terminal.WriteLine("Enter your selection:");
+
+    }
 
 
-   
 
-    void files() 
+
+    void files()
     {
         currentScreen = Screen.quite;
         Terminal.ClearScreen();
@@ -45,7 +45,7 @@ public class FinalHack : MonoBehaviour
         Terminal.WriteLine("*************************");
         Terminal.WriteLine("[ Enter download ]");
     }
-    void login() 
+    void login()
     {
         currentScreen = Screen.MainMenu;
         Terminal.ClearScreen();
@@ -55,8 +55,8 @@ public class FinalHack : MonoBehaviour
 
     void OnUserInput(string input) //Function that checks which screen the user will redirect into
     {
-        
-        
+
+
         if (currentScreen == Screen.MainMenu)
         {
             RunMainMenu(input);
@@ -77,7 +77,7 @@ public class FinalHack : MonoBehaviour
     void RunMainMenu(string input)
     {
 
-        if (input=="1")
+        if (input == "1")
         {
             AskForPassword();
 
@@ -85,7 +85,7 @@ public class FinalHack : MonoBehaviour
         else
         {
             Terminal.WriteLine("Please choose a valid option");
-           
+
         }
 
     }
@@ -95,7 +95,8 @@ public class FinalHack : MonoBehaviour
         {
             files();
         }
-        else {
+        else
+        {
             Terminal.WriteLine("EMPTY FILE");
         }
     }
@@ -118,16 +119,20 @@ public class FinalHack : MonoBehaviour
         FindObjectOfType<finalhackonandoff>().keyboad.SetActive(false);
         FindObjectOfType<finalhackonandoff>().Terminal.SetActive(false);
         FindObjectOfType<PlayerGuidance>().guidance5part2.SetActive(false);
+
+        FindObjectOfType<PlayerGuidance>().guidance5part3.SetActive(false);
+        Destroy(FindObjectOfType<playercontroller>().gameObject.GetComponent<hackscenescript>().dontdestroy.gameObject);
         Destroy(FindObjectOfType<playercontroller>().gameObject);
-        SceneManager.LoadScene(14);
+        SceneManager.LoadScene(15);
     }
 
-    void AskForPassword() {//Function that calls for the screen //The user will
-        currentScreen=Screen.Password;
+    void AskForPassword()
+    {//Function that calls for the screen //The user will
+        currentScreen = Screen.Password;
         Terminal.ClearScreen();
         Terminal.WriteLine("Enter your Password : ");
         SetPassword();
-       
+
     }
     void SetPassword()
     {
@@ -146,10 +151,10 @@ public class FinalHack : MonoBehaviour
         }
     }
 
-        // Update is called once per frame
-        void Update()
-        {
+    // Update is called once per frame
+    void Update()
+    {
 
-        }
     }
+}
 

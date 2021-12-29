@@ -106,7 +106,7 @@ public class hackscenescript : MonoBehaviour
                 DontDestroyOnLoad(dontdestroy3);
                 DontDestroyOnLoad(audiolvl3);
                 SceneInteracftion.SetActive(false);
-                SceneManager.LoadScene(13);
+                SceneManager.LoadScene(14);
             }
         }
         if (Input.GetKey(e))
@@ -177,6 +177,7 @@ public class hackscenescript : MonoBehaviour
                 if(guidance5Check == true)
                 {
                     FindObjectOfType<PlayerGuidance>().guidance5part2.SetActive(true);
+                    FindObjectOfType<PlayerGuidance>().guidance5part3.SetActive(true);
                 }
             }
 
