@@ -305,6 +305,9 @@ MonoBehaviour:
     m_Bits: 512
   kickk: {fileID: 2481417049940002204}
   kickk2: {fileID: 2481417048365605400}
+  Jump: {fileID: 8300000, guid: 2b4d06f0906b8e34db9d1d8643ac4a93, type: 3}
+  Run: {fileID: 8300000, guid: 2baf83940e422374b9cd1234e38a75b6, type: 3}
+  Kicksound: {fileID: 8300000, guid: 0964f0921d228824fa63aed6a4eddbfb, type: 3}
 --- !u!114 &2481417050169552909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,10 +368,12 @@ MonoBehaviour:
   triggerCard: 0
   triggerlight: 0
   triggerMap: 0
+  triggerofficemarca: 0
   hackcheck: {fileID: 0}
   cardhack: {fileID: 0}
   lighthack: {fileID: 0}
   maphack: {fileID: 0}
+  hackoffice: {fileID: 0}
   player: {fileID: 2481417050169552911}
   interaction: {fileID: 0}
   SceneInteracftion: {fileID: 0}
@@ -376,3 +381,6 @@ MonoBehaviour:
   dontdestroy: {fileID: 0}
   dontdestroy2: {fileID: 0}
   dontdestroy3: {fileID: 0}
+  dontdestroyaudio: {fileID: 0}
+  audiolvl2: {fileID: 0}
+  audiolvl3: {fileID: 0}

@@ -18,6 +18,9 @@ public class playercontroller : MonoBehaviour
     private Animator anim;
     public GameObject kickk;
     public GameObject kickk2;
+    public AudioClip Jump;
+    public AudioClip Run;
+    public AudioClip Kicksound;
     // Start is called before the first frame update
 
     void Start()
@@ -42,12 +45,14 @@ public class playercontroller : MonoBehaviour
         }
         anim.SetBool("grounded", grounded);
         if (Input.GetKey(leftarrow)) {
+
             GetComponent<Rigidbody2D>().velocity = new Vector2(-movespeed, GetComponent<Rigidbody2D>().velocity.y);
             if (isfacingright)
             {
                 flip();
                 isfacingright = false;
             }
+
         }
         if (Input.GetKey(rightarrow))
         {
@@ -58,9 +63,9 @@ public class playercontroller : MonoBehaviour
                 flip();
                 isfacingright = true;
             }
+
         }
         anim.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
-
     }
     void flip()
     {
@@ -69,11 +74,12 @@ public class playercontroller : MonoBehaviour
     void jump()
     {
         GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumphieght);
+        AudioController.instance.playersingle(Jump);
     }
 
     void Kick (){
-
-            kickk.SetActive(true);
+        AudioController.instance.playersingle(Kicksound);
+        kickk.SetActive(true);
             kickk2.SetActive(true);
             anim.SetBool("kick", true); 
             StartCoroutine(WaitForHalfASecond());        

@@ -22,7 +22,6 @@ public class playerstats : MonoBehaviour {
 
 	public GameObject livesicon1;
 	public GameObject livesicon2;
-
 	// Use this for initialization
 	void Start () {
 		spriterenderer = this.gameObject.GetComponent<SpriteRenderer>();
@@ -88,8 +87,6 @@ public class playerstats : MonoBehaviour {
 				}
 				
 			}
-			Debug.Log("player health:" + this.health.ToString());
-			Debug.Log("player lives:" + this.lives.ToString());
 		}
 		playhitreaction();
 	}
