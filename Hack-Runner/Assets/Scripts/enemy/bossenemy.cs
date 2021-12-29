@@ -25,8 +25,6 @@ public class bossenemy : enemyController
     public GameObject healthicon8;
     public GameObject healthicon9;
     public GameObject healthicon10;
-    public GameObject liveicon1;
-    public GameObject liveicon2;
     // Start is called before the first frame update
     void Start()
     {
@@ -85,29 +83,28 @@ public class bossenemy : enemyController
                 if (bosshealth == 5)
                 {
                     bosshealth--;
-                    Destroy(healthicon5);
+                    Destroy(healthicon10);
                 }
                 else if (bosshealth == 4)
                 {
                     bosshealth--;
-                    Destroy(healthicon4);
+                    Destroy(healthicon9);
                 }
                 else if (bosshealth == 3)
                 {
                     bosshealth--;
-                    Destroy(healthicon3);
+                    Destroy(healthicon8);
                 }
                 else if (bosshealth == 2)
                 {
                     bosshealth--;
-                    Destroy(healthicon2);
+                    Destroy(healthicon7);
                 }
                 else if (bosshealth == 1)
                 {
                     bosshealth--;
                     lives--;
-                    Destroy(healthicon1);
-                    Destroy(liveicon1);
+                    Destroy(healthicon6);
                     bosshealth = 5;
                 }
             }
@@ -136,9 +133,8 @@ public class bossenemy : enemyController
                 else if (bosshealth == 1)
                 {
                     bosshealth--;
-                    lives--;
+                    --lives;
                     Destroy(healthicon1);
-                    Destroy(liveicon2);
                 }
             }
             else if(lives == 0) {
