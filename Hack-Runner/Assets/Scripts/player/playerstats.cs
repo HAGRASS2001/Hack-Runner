@@ -65,7 +65,7 @@ public class playerstats : MonoBehaviour {
 				this.health = 0;
 			}
 			if (this.lives > 0 && this.health == 0) {
-				//FindObjectOfType<lvlmanager>().RespawnPlayer();
+				
 				if (lives == 2) {
 					healthicon3.SetActive(true);
 					healthicon2.SetActive(true);
@@ -76,8 +76,17 @@ public class playerstats : MonoBehaviour {
 
 				} else if (lives == 1) {
 					livesicon2.SetActive(false);
+					FindObjectOfType<lvlmanager>().RespawnPlayer();
 					this.lives--;
+					healthicon3.SetActive(true);
+					healthicon2.SetActive(true);
+					healthicon1.SetActive(true);
+					livesicon1.SetActive(true);
+					livesicon2.SetActive(true);
+					this.health = 3;
+					this.lives = 2;
 				}
+				
 			}
 			Debug.Log("player health:" + this.health.ToString());
 			Debug.Log("player lives:" + this.lives.ToString());
