@@ -104,6 +104,7 @@ public class hackscenescript : MonoBehaviour
                 DontDestroyOnLoad(dontdestroy);
                 DontDestroyOnLoad(dontdestroy2);
                 DontDestroyOnLoad(dontdestroy3);
+                DontDestroyOnLoad(audiolvl3);
                 SceneInteracftion.SetActive(false);
                 SceneManager.LoadScene(13);
             }

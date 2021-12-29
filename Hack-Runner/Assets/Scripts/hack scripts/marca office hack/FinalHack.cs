@@ -21,7 +21,7 @@ public class FinalHack : MonoBehaviour
         {
             currentScreen = Screen.MainMenu1;
              Terminal.ClearScreen();
-            Terminal.WriteLine("-------Welcome Mr.Marcanos---------------");
+            Terminal.WriteLine("-------Welcome Mr.Marcano---------------");
             Terminal.WriteLine("What would you like to open ?");
             Terminal.WriteLine("Press 1 for go to Files");
             Terminal.WriteLine("Press 2 for camRecord  ");
@@ -37,7 +37,7 @@ public class FinalHack : MonoBehaviour
     {
         currentScreen = Screen.quite;
         Terminal.ClearScreen();
-        Terminal.WriteLine("-------Welcome Mr.Marcanos---------------");
+        Terminal.WriteLine("-------Welcome Mr.Marcano---------------");
         Terminal.WriteLine("*************************");
         Terminal.WriteLine("*                        *");
         Terminal.WriteLine("*          Secret Files  *");
@@ -49,8 +49,8 @@ public class FinalHack : MonoBehaviour
     {
         currentScreen = Screen.MainMenu;
         Terminal.ClearScreen();
-        Terminal.WriteLine("-----Welcome to Marcanos Company-------");
-        Terminal.WriteLine("--------Press 1 to login-------------- ");
+        Terminal.WriteLine("-----Welcome to Marcano's Company-----");
+        Terminal.WriteLine("-----------Press 1 to login-----------");
     }
 
     void OnUserInput(string input) //Function that checks which screen the user will redirect into
@@ -118,6 +118,7 @@ public class FinalHack : MonoBehaviour
         FindObjectOfType<finalhackonandoff>().keyboad.SetActive(false);
         FindObjectOfType<finalhackonandoff>().Terminal.SetActive(false);
         FindObjectOfType<PlayerGuidance>().guidance5part2.SetActive(false);
+        Destroy(FindObjectOfType<playercontroller>().gameObject);
         SceneManager.LoadScene(14);
     }
 
