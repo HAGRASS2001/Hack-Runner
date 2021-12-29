@@ -401,6 +401,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas_pause
       objectReference: {fileID: 0}
+    - target: {fileID: 2567132924987198567, guid: 2cc5ff793eae2ae4f9d1cff95653d68f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2567132924987198570, guid: 2cc5ff793eae2ae4f9d1cff95653d68f,
         type: 3}
       propertyPath: m_LocalPosition.x

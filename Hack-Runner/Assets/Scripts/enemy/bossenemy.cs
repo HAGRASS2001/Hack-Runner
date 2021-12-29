@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class bossenemy : enemyController
 {
-    public int bosshealth = 10;
+    public int bosshealth = 5;
     public int lives = 2;
     private Animator anim;
     private float flickertime = 0f;
@@ -82,32 +82,7 @@ public class bossenemy : enemyController
         {
             if (lives == 2)
             {
-                if (bosshealth == 10)
-                {
-                    bosshealth--;
-                    Destroy(healthicon10);
-                }
-                else if (bosshealth == 9)
-                {
-                    bosshealth--;
-                    Destroy(healthicon9);
-                }
-                else if (bosshealth == 8)
-                {
-                    bosshealth--;
-                    Destroy(healthicon8);
-                }
-                else if (bosshealth == 7)
-                {
-                    bosshealth--;
-                    Destroy(healthicon7);
-                }
-                else if (bosshealth == 6)
-                {
-                    bosshealth--;
-                    Destroy(healthicon6);
-                }
-                else if (bosshealth == 5)
+                if (bosshealth == 5)
                 {
                     bosshealth--;
                     Destroy(healthicon5);
@@ -133,37 +108,12 @@ public class bossenemy : enemyController
                     lives--;
                     Destroy(healthicon1);
                     Destroy(liveicon1);
-                    bosshealth = 10;
+                    bosshealth = 5;
                 }
             }
             else if (lives == 1)
             {
-                if (bosshealth == 10)
-                {
-                    bosshealth--;
-                    Destroy(healthicon10);
-                }
-                else if (bosshealth == 9)
-                {
-                    bosshealth--;
-                    Destroy(healthicon9);
-                }
-                else if (bosshealth == 8)
-                {
-                    bosshealth--;
-                    Destroy(healthicon8);
-                }
-                else if (bosshealth == 7)
-                {
-                    bosshealth--;
-                    Destroy(healthicon7);
-                }
-                else if (bosshealth == 6)
-                {
-                    bosshealth--;
-                    Destroy(healthicon6);
-                }
-                else if (bosshealth == 5)
+                if (bosshealth == 5)
                 {
                     bosshealth--;
                     Destroy(healthicon5);

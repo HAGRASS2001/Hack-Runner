@@ -95,6 +95,9 @@ public class hackscenescript : MonoBehaviour
             {
                 Destroy(FindObjectOfType<playercontroller>().gameObject);
                 SceneInteracftion.SetActive(false);
+                Destroy(FindObjectOfType<playercontroller>().gameObject.GetComponent<hackscenescript>().dontdestroy.gameObject);
+                Destroy(dontdestroy2);
+                Destroy(dontdestroy3);
                 Destroy(dontdestroyaudio);
                 SceneManager.LoadScene(11);
             }

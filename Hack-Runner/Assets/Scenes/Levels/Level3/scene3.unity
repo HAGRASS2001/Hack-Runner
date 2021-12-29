@@ -412,6 +412,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas_pause
       objectReference: {fileID: 0}
+    - target: {fileID: 2567132924987198567, guid: 2cc5ff793eae2ae4f9d1cff95653d68f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2567132924987198570, guid: 2cc5ff793eae2ae4f9d1cff95653d68f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1094,7 +1099,13 @@ PrefabInstance:
       propertyPath: isfacingright
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4026286437062555565, guid: cf160b3dc27307d4897d3584a7f1bf94,
+        type: 3}
+      propertyPath: bosshealth
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4026286437062555565, guid: cf160b3dc27307d4897d3584a7f1bf94, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cf160b3dc27307d4897d3584a7f1bf94, type: 3}
 --- !u!4 &1930361399 stripped
 Transform:
@@ -1102,6 +1113,44 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1868861314}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2039372463 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4026286437062555564, guid: cf160b3dc27307d4897d3584a7f1bf94,
+    type: 3}
+  m_PrefabInstance: {fileID: 1886959265}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2039372465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039372463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dab40afe157f8d4c8a4f0e0d05b2e69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isfacingright: 0
+  maxspeed: 3
+  damage: 1
+  bosshealth: 5
+  lives: 2
+  flickerduration: 0.1
+  isimmune: 0
+  immunityduration: 1.5
+  healthicon1: {fileID: 0}
+  healthicon2: {fileID: 0}
+  healthicon3: {fileID: 0}
+  healthicon4: {fileID: 0}
+  healthicon5: {fileID: 0}
+  healthicon6: {fileID: 0}
+  healthicon7: {fileID: 0}
+  healthicon8: {fileID: 0}
+  healthicon9: {fileID: 0}
+  healthicon10: {fileID: 0}
+  liveicon1: {fileID: 0}
+  liveicon2: {fileID: 0}
 --- !u!1001 &2101247961
 PrefabInstance:
   m_ObjectHideFlags: 0

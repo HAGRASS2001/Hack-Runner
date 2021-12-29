@@ -11,7 +11,7 @@ public class CutScenes3  : MonoBehaviour
     }
     public void LoadScene()
     {
-        SceneManager.LoadScene(12);
+        SceneManager.LoadScene(13);
     }
     // Update is called once per frame
     void Update()
