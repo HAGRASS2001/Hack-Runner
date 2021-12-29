@@ -118,6 +118,7 @@ public class FinalHack : MonoBehaviour
         FindObjectOfType<finalhackonandoff>().keyboad.SetActive(false);
         FindObjectOfType<finalhackonandoff>().Terminal.SetActive(false);
         FindObjectOfType<PlayerGuidance>().guidance5part2.SetActive(false);
+        Destroy(FindObjectOfType<playercontroller>().gameObject.GetComponent<hackscenescript>().dontdestroy.gameObject);
         Destroy(FindObjectOfType<playercontroller>().gameObject);
         SceneManager.LoadScene(14);
     }
