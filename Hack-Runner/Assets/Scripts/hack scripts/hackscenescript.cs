@@ -26,6 +26,7 @@ public class hackscenescript : MonoBehaviour
     private bool guidance2Check = false;
     private bool guidance3Check = false;
     private bool guidance4Check = false;
+    private bool guidance5Check = false;
     private bool scene2;
     private bool scene2LVL2;
     private bool gotolvl1scene3;
@@ -38,6 +39,7 @@ public class hackscenescript : MonoBehaviour
     public GameObject dontdestroy3;
     public GameObject dontdestroyaudio;
     public GameObject audiolvl2;
+    public GameObject audiolvl3;
     // Start is called before the first frame update
     void Start()
     {
@@ -103,7 +105,6 @@ public class hackscenescript : MonoBehaviour
                 DontDestroyOnLoad(dontdestroy2);
                 DontDestroyOnLoad(dontdestroy3);
                 SceneInteracftion.SetActive(false);
-                Destroy(dontdestroyaudio);
                 SceneManager.LoadScene(13);
             }
         }
@@ -170,12 +171,12 @@ public class hackscenescript : MonoBehaviour
                 FindObjectOfType<finalhackonandoff>().keyboad.SetActive(true);
                 FindObjectOfType<finalhackonandoff>().Terminal.SetActive(true);
                 hackoffice.SetActive(false);
-                // FindObjectOfType<PlayerGuidance>().guidance4.SetActive(false);
+                FindObjectOfType<PlayerGuidance>().guidance5.SetActive(false);
                 interaction.SetActive(false);
-                //if (guidance4Check == true)
-                //{
-                //    FindObjectOfType<PlayerGuidance>().guidance4part2.SetActive(true);
-                //}
+                if(guidance5Check == true)
+                {
+                    FindObjectOfType<PlayerGuidance>().guidance5part2.SetActive(true);
+                }
             }
 
         }
@@ -254,8 +255,8 @@ public class hackscenescript : MonoBehaviour
             triggerofficemarca = true;
             gotolvl3scene2 = false;
             interaction.SetActive(true);
-            //FindObjectOfType<PlayerGuidance>().guidance4.SetActive(true);
-           // guidance4Check = true;
+            FindObjectOfType<PlayerGuidance>().guidance5.SetActive(true);
+            guidance5Check = true;
         }
         if (other.tag == "end") {
             triggerKey = false;
@@ -273,6 +274,10 @@ public class hackscenescript : MonoBehaviour
         if(other.tag == "AudioLVL2")
         {
             audiolvl2 = other.gameObject;
+        }
+        if(other.tag == "AudioLVL3")
+        {
+            audiolvl3 = other.gameObject;
         }
         if(other.tag == "FlashBack")
         {

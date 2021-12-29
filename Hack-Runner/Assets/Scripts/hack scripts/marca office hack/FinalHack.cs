@@ -117,6 +117,7 @@ public class FinalHack : MonoBehaviour
         FindObjectOfType<finalhackonandoff>().display.SetActive(false);
         FindObjectOfType<finalhackonandoff>().keyboad.SetActive(false);
         FindObjectOfType<finalhackonandoff>().Terminal.SetActive(false);
+        FindObjectOfType<PlayerGuidance>().guidance5part2.SetActive(false);
         SceneManager.LoadScene(14);
     }
 
