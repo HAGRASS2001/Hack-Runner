@@ -17,6 +17,7 @@ public class PlayerGuidance : MonoBehaviour
     public GameObject guidance5;
     public GameObject guidance5part2;
     public GameObject guidance5part3;
+    public GameObject jordanguidance;
     // Start is called before the first frame update
     void Start()
     {

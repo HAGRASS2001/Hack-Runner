@@ -35,6 +35,7 @@ TagManager:
   - gotolvl4scene2
   - AudioLVL4
   - Ending
+  - JordanGuidance
   layers:
   - Default
   - TransparentFX

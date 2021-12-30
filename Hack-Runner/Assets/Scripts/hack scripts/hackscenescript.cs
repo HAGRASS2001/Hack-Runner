@@ -323,6 +323,15 @@ public class hackscenescript : MonoBehaviour
             FindObjectOfType<FlashBack>().flashbackvid.SetActive(true);
             Invoke("TurnFlashBackOff", 5);
         }
+        if(other.tag == "JordanGuidance")
+        {
+            FindObjectOfType<PlayerGuidance>().jordanguidance.SetActive(true);
+            Invoke("JordanOff", 10);
+        }
+    }
+    public void JordanOff()
+    {
+        FindObjectOfType<PlayerGuidance>().jordanguidance.SetActive(false);
     }
     public void TurnFlashBackOff()
     {
