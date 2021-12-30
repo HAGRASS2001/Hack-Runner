@@ -67,7 +67,7 @@ public class hackscenescript : MonoBehaviour
                 DontDestroyOnLoad(dontdestroy);
                 DontDestroyOnLoad(dontdestroy2);
                 DontDestroyOnLoad(dontdestroy3);
-                Application.LoadLevel(5);
+                Application.LoadLevel(3);
             }
             if (gotolvl1scene3 == true)
             {
@@ -77,7 +77,7 @@ public class hackscenescript : MonoBehaviour
                 DontDestroyOnLoad(dontdestroy);
                 DontDestroyOnLoad(dontdestroy2);
                 DontDestroyOnLoad(dontdestroy3);
-                Application.LoadLevel(8);
+                Application.LoadLevel(6);
             }
             if (gotolvl2scene1 == true)
             {
@@ -97,7 +97,7 @@ public class hackscenescript : MonoBehaviour
                 DontDestroyOnLoad(dontdestroy3);
                 DontDestroyOnLoad(dontdestroyaudio);
                 SceneInteracftion.SetActive(false);
-                SceneManager.LoadScene(7);
+                SceneManager.LoadScene(5);
             }
             if (gotolvl3scene1 == true)
             {
@@ -107,7 +107,7 @@ public class hackscenescript : MonoBehaviour
                 Destroy(dontdestroy2);
                 Destroy(dontdestroy3);
                 Destroy(dontdestroyaudio);
-                SceneManager.LoadScene(11);
+                SceneManager.LoadScene(9);
             }
             if (gotolvl3scene2 == true)
             {
@@ -117,7 +117,7 @@ public class hackscenescript : MonoBehaviour
                 DontDestroyOnLoad(dontdestroy3);
                 DontDestroyOnLoad(audiolvl3);
                 SceneInteracftion.SetActive(false);
-                SceneManager.LoadScene(14);
+                SceneManager.LoadScene(12);
             }
             if (gotolvl4scene2 == true)
             {
@@ -128,7 +128,7 @@ public class hackscenescript : MonoBehaviour
                 DontDestroyOnLoad(dontdestroy4);
                 DontDestroyOnLoad(audiolvl4);
                 SceneInteracftion.SetActive(false);
-                SceneManager.LoadScene(17);
+                SceneManager.LoadScene(15);
             }
         }
         if (Input.GetKey(e))

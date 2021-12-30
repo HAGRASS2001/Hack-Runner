@@ -14,12 +14,12 @@ public class EndingChoice : MonoBehaviour
     public void PlayEnding1()
     {
         Destroy(LastMusic);
-        SceneManager.LoadScene(18);
+        SceneManager.LoadScene(16);
     }
     public void PlayEnding2()
     {
         Destroy(LastMusic);
-        SceneManager.LoadScene(19);
+        SceneManager.LoadScene(17);
     }
     // Update is called once per frame
     void Update()

@@ -11,6 +11,6 @@ public class CutScenes4 : MonoBehaviour
     }
     public void LoadNewScene()
     {
-        SceneManager.LoadScene(16);
+        SceneManager.LoadScene(14);
     }
 }

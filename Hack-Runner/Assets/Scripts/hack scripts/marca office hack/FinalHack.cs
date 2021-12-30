@@ -122,7 +122,7 @@ public class FinalHack : MonoBehaviour
         Destroy(FindObjectOfType<playercontroller>().gameObject);
         FindObjectOfType<PlayerGuidance>().guidance5part2.SetActive(false);
         FindObjectOfType<PlayerGuidance>().guidance5part3.SetActive(false);
-        SceneManager.LoadScene(15);
+        SceneManager.LoadScene(13);
     }
 
     void AskForPassword()

@@ -12,6 +12,6 @@ public class CutScenes6 : MonoBehaviour
     }
     public void LoadNewScene()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(0);
     }
 }

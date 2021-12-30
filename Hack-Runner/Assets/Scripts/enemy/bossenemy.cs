@@ -148,7 +148,7 @@ public class bossenemy : enemyController
                     Destroy(healthicon1);
                     Destroy(this.gameObject);
                     Destroy(FindObjectOfType<playercontroller>().gameObject.GetComponent<hackscenescript>().audiolvl3);
-                    SceneManager.LoadScene(12);
+                    SceneManager.LoadScene(10);
                 }
             }
         }
