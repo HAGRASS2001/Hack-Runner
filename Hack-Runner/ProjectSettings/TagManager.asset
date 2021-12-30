@@ -32,6 +32,9 @@ TagManager:
   - flip
   - returnflip
   - AudioLVL3
+  - gotolvl4scene2
+  - AudioLVL4
+  - Ending
   layers:
   - Default
   - TransparentFX

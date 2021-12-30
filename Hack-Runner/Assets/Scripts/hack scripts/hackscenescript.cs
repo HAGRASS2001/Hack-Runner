@@ -34,12 +34,16 @@ public class hackscenescript : MonoBehaviour
     private bool gotolvl2scene2;
     private bool gotolvl3scene1;
     private bool gotolvl3scene2;
+    private bool gotolvl4scene2;
     public Canvas dontdestroy;
     public GameObject dontdestroy2;
     public GameObject dontdestroy3;
+    public GameObject dontdestroy4;
     public GameObject dontdestroyaudio;
     public GameObject audiolvl2;
     public GameObject audiolvl3;
+    public GameObject audiolvl4;
+    public GameObject Ending1;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +51,7 @@ public class hackscenescript : MonoBehaviour
         interactionCheck = false;
         SceneInteracftion.SetActive(false);
         interaction.SetActive(false);
+        Ending1.SetActive(false);
     }
 
     // Update is called once per frame
@@ -110,6 +115,17 @@ public class hackscenescript : MonoBehaviour
                 DontDestroyOnLoad(audiolvl3);
                 SceneInteracftion.SetActive(false);
                 SceneManager.LoadScene(14);
+            }
+            if (gotolvl4scene2 == true)
+            {
+                DontDestroyOnLoad(FindObjectOfType<playercontroller>().gameObject);
+                DontDestroyOnLoad(dontdestroy);
+                DontDestroyOnLoad(dontdestroy2);
+                DontDestroyOnLoad(dontdestroy3);
+                DontDestroyOnLoad(dontdestroy4);
+                DontDestroyOnLoad(audiolvl4);
+                SceneInteracftion.SetActive(false);
+                SceneManager.LoadScene(17);
             }
         }
         if (Input.GetKey(e))
@@ -222,6 +238,11 @@ public class hackscenescript : MonoBehaviour
             gotolvl3scene2 = true;
             SceneInteracftion.SetActive(true);
         }
+        if (other.tag == "gotolvl4scene2")
+        {
+            gotolvl4scene2 = true;
+            SceneInteracftion.SetActive(true);
+        }
         if (other.tag == "hack")
         {
             hackcheck = other.gameObject;
@@ -284,7 +305,16 @@ public class hackscenescript : MonoBehaviour
         {
             audiolvl3 = other.gameObject;
         }
-        if(other.tag == "FlashBack")
+        if (other.tag == "AudioLVL4")
+        {
+            audiolvl4 = other.gameObject;
+        }
+        if(other.tag == "Ending")
+        {
+            Ending1.SetActive(true);
+            player.constraints = RigidbodyConstraints2D.FreezeAll;
+        }
+        if (other.tag == "FlashBack")
         {
             player.constraints = RigidbodyConstraints2D.FreezeAll;
             FindObjectOfType<FlashBack>().flashbackvid.SetActive(true);
