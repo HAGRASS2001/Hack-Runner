@@ -330,6 +330,7 @@ MonoBehaviour:
   healthicon3: {fileID: 0}
   livesicon1: {fileID: 0}
   livesicon2: {fileID: 0}
+  hitreaction: {fileID: 8300000, guid: 0203e2b4a7cd4454f834c1342a4a047a, type: 3}
 --- !u!95 &2481417050169552908
 Animator:
   serializedVersion: 3

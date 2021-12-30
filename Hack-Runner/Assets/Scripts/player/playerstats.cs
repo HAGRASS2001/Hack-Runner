@@ -22,6 +22,8 @@ public class playerstats : MonoBehaviour {
 
 	public GameObject livesicon1;
 	public GameObject livesicon2;
+
+	public AudioClip hitreaction;
 	// Use this for initialization
 	void Start () {
 		spriterenderer = this.gameObject.GetComponent<SpriteRenderer>();
@@ -51,13 +53,16 @@ public class playerstats : MonoBehaviour {
 			this.health = this.health - damage;
 			if (this.health == 2)
 			{
+				AudioController.instance.playersingle(hitreaction);
 				healthicon3.SetActive(false);
 			}
 			else if (health == 1)
 			{
+				AudioController.instance.playersingle(hitreaction);
 				healthicon2.SetActive(false);
 			}
 			else {
+				AudioController.instance.playersingle(hitreaction);
 				healthicon1.SetActive(false);
 			}
 			if (this.health < 0) {

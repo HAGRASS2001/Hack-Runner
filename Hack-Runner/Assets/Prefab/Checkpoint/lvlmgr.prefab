@@ -44,3 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkpoint: {fileID: 0}
+  death: {fileID: 8300000, guid: 249804930d74d51438c966a68612973e, type: 3}

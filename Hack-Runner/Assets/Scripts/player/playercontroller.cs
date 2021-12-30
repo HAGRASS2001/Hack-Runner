@@ -19,7 +19,6 @@ public class playercontroller : MonoBehaviour
     public GameObject kickk;
     public GameObject kickk2;
     public AudioClip Jump;
-    public AudioClip Run;
     public AudioClip Kicksound;
     // Start is called before the first frame update
 
@@ -27,9 +26,6 @@ public class playercontroller : MonoBehaviour
     {
         isfacingright = true;
         anim = GetComponent<Animator>();
-
-
-        
     }
 
     // Update is called once per frame
@@ -44,8 +40,8 @@ public class playercontroller : MonoBehaviour
             jump();
         }
         anim.SetBool("grounded", grounded);
-        if (Input.GetKey(leftarrow)) {
 
+        if (Input.GetKey(leftarrow)) {
             GetComponent<Rigidbody2D>().velocity = new Vector2(-movespeed, GetComponent<Rigidbody2D>().velocity.y);
             if (isfacingright)
             {
@@ -56,7 +52,6 @@ public class playercontroller : MonoBehaviour
         }
         if (Input.GetKey(rightarrow))
         {
-
             GetComponent<Rigidbody2D>().velocity = new Vector2(movespeed, GetComponent<Rigidbody2D>().velocity.y);
             if (!isfacingright)
             {
