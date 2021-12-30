@@ -224,6 +224,76 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2101247961}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &94424515
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4142287699518412295, guid: 64e838eeda57d744eb12c3cf94a2654e,
+        type: 3}
+      propertyPath: m_Name
+      value: bossdamageaudio
+      objectReference: {fileID: 0}
+    - target: {fileID: 4142287699518412298, guid: 64e838eeda57d744eb12c3cf94a2654e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 4142287699518412298, guid: 64e838eeda57d744eb12c3cf94a2654e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4142287699518412298, guid: 64e838eeda57d744eb12c3cf94a2654e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4142287699518412298, guid: 64e838eeda57d744eb12c3cf94a2654e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4142287699518412298, guid: 64e838eeda57d744eb12c3cf94a2654e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4142287699518412298, guid: 64e838eeda57d744eb12c3cf94a2654e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4142287699518412298, guid: 64e838eeda57d744eb12c3cf94a2654e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4142287699518412298, guid: 64e838eeda57d744eb12c3cf94a2654e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4142287699518412298, guid: 64e838eeda57d744eb12c3cf94a2654e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4142287699518412298, guid: 64e838eeda57d744eb12c3cf94a2654e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4142287699518412298, guid: 64e838eeda57d744eb12c3cf94a2654e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4142287699518412297, guid: 64e838eeda57d744eb12c3cf94a2654e, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 64e838eeda57d744eb12c3cf94a2654e, type: 3}
 --- !u!1 &125444503
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,7 +539,7 @@ MonoBehaviour:
   target: {fileID: 1930361399}
   cameraspeed: 4
   minX: 0
-  maxX: 100
+  maxX: 9.5
   minY: 0
   maxY: 0
 --- !u!1001 &462421201
@@ -665,6 +735,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cc5ff793eae2ae4f9d1cff95653d68f, type: 3}
+--- !u!1 &591116271 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4142287699518412295, guid: 64e838eeda57d744eb12c3cf94a2654e,
+    type: 3}
+  m_PrefabInstance: {fileID: 94424515}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &591116272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591116271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d80d4e53e207434faabf49b6531d6c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  efxsource: {fileID: 591116273}
+  musicsource: {fileID: 591116273}
+  lowpitchrange: 0.95
+  highpitchrange: 1.05
+--- !u!82 &591116273 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4142287699518412296, guid: 64e838eeda57d744eb12c3cf94a2654e,
+    type: 3}
+  m_PrefabInstance: {fileID: 94424515}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &642711842
 GameObject:
   m_ObjectHideFlags: 0
@@ -1779,6 +1877,7 @@ MonoBehaviour:
   healthicon8: {fileID: 1648006611}
   healthicon9: {fileID: 125444503}
   healthicon10: {fileID: 1199986410}
+  death: {fileID: 8300000, guid: 7aae31439212cca4e84e172761e3202e, type: 3}
 --- !u!1001 &2101247961
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -81,6 +81,9 @@ public class hackscenescript : MonoBehaviour
             }
             if (gotolvl2scene1 == true)
             {
+                Destroy(FindObjectOfType<playercontroller>().gameObject.GetComponent<hackscenescript>().dontdestroy.gameObject);
+                Destroy(dontdestroy2);
+                Destroy(dontdestroy3);
                 Destroy(FindObjectOfType<playercontroller>().gameObject);
                 SceneInteracftion.SetActive(false);
                 Destroy(dontdestroyaudio);

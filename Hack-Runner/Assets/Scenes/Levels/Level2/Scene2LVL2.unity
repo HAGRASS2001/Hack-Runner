@@ -1473,8 +1473,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   cameraspeed: 5
-  minX: 0
-  maxX: 500
+  minX: 114
+  maxX: 162.5
   minY: 0
   maxY: 0
 --- !u!1001 &1270004575

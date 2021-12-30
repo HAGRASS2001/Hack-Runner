@@ -25,6 +25,7 @@ public class bossenemy : enemyController
     public GameObject healthicon8;
     public GameObject healthicon9;
     public GameObject healthicon10;
+    public AudioClip death;
     // Start is called before the first frame update
     void Start()
     {
@@ -82,26 +83,31 @@ public class bossenemy : enemyController
             {
                 if (bosshealth == 5)
                 {
+                    bossdamage.instance.playersingle(death);
                     bosshealth--;
                     Destroy(healthicon10);
                 }
                 else if (bosshealth == 4)
                 {
+                    bossdamage.instance.playersingle(death);
                     bosshealth--;
                     Destroy(healthicon9);
                 }
                 else if (bosshealth == 3)
                 {
+                    bossdamage.instance.playersingle(death);
                     bosshealth--;
                     Destroy(healthicon8);
                 }
                 else if (bosshealth == 2)
                 {
+                    bossdamage.instance.playersingle(death);
                     bosshealth--;
                     Destroy(healthicon7);
                 }
                 else if (bosshealth == 1)
                 {
+                    bossdamage.instance.playersingle(death);
                     bosshealth--;
                     lives--;
                     Destroy(healthicon6);
@@ -112,35 +118,38 @@ public class bossenemy : enemyController
             {
                 if (bosshealth == 5)
                 {
+                    bossdamage.instance.playersingle(death);
                     bosshealth--;
                     Destroy(healthicon5);
                 }
                 else if (bosshealth == 4)
                 {
+                    bossdamage.instance.playersingle(death);
                     bosshealth--;
                     Destroy(healthicon4);
                 }
                 else if (bosshealth == 3)
                 {
+                    bossdamage.instance.playersingle(death);
                     bosshealth--;
                     Destroy(healthicon3);
                 }
                 else if (bosshealth == 2)
                 {
+                    bossdamage.instance.playersingle(death);
                     bosshealth--;
                     Destroy(healthicon2);
                 }
                 else if (bosshealth == 1)
                 {
+                    bossdamage.instance.playersingle(death);
                     bosshealth--;
                     --lives;
                     Destroy(healthicon1);
+                    Destroy(this.gameObject);
+                    Destroy(FindObjectOfType<playercontroller>().gameObject.GetComponent<hackscenescript>().audiolvl3);
+                    SceneManager.LoadScene(12);
                 }
-            }
-            else if(lives == 0) {
-                Destroy(this.gameObject);
-                Destroy(FindObjectOfType<playercontroller>().gameObject.GetComponent<hackscenescript>().audiolvl3);
-                SceneManager.LoadScene(12);
             }
         }
         enemyhitreaction();
