@@ -6,14 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 39ef62d907cacd346953f2fb743ef064
+  - enabled: 1
     path: Assets/Scenes/Levels/Level1/scene1(intro).unity
     guid: 14091c88b5fffaf4c82e41256c0a5ce0
   - enabled: 1
     path: Assets/Scenes/hack scenes/key-hack.unity
     guid: e4f4982668868aa438a8d00043cbd30c
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 39ef62d907cacd346953f2fb743ef064
   - enabled: 1
     path: Assets/Scenes/characterInventory.unity
     guid: d0d2a30e54f53ec4a958998308f97b84
@@ -62,4 +62,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Level4/Scene2.unity
     guid: ca8790c90e0b648008c2a9ba2186c20d
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/CutScene 5.unity
+    guid: 8ce693308abe69242a3658fdd8452597
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/CutScene 6.unity
+    guid: 38ce091f77b49404bb0b44dc604c0305
   m_configObjects: {}

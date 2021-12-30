@@ -5,19 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class EndingChoice : MonoBehaviour
 {
-   
+    public GameObject LastMusic;
     // Start is called before the first frame update
     void Start()
     {
-        
+        LastMusic = FindObjectOfType<hackscenescript>().audiolvl4;
     }
     public void PlayEnding1()
     {
-        SceneManager.LoadScene(1);
+        Destroy(LastMusic);
+        SceneManager.LoadScene(18);
     }
     public void PlayEnding2()
     {
-        SceneManager.LoadScene(1);
+        Destroy(LastMusic);
+        SceneManager.LoadScene(19);
     }
     // Update is called once per frame
     void Update()
